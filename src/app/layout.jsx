@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "FirstLook",
-  description: "FirstLook",
+  description: "Connecting singles worldwide, effortlessly. Your reliable platform for matchmaking !",
 };
 
 export default function RootLayout({ children }) {
