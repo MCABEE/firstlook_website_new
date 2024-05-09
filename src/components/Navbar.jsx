@@ -6,7 +6,7 @@ const Navbar = () => {
         <>
             <div className='md:block hidden'>
                 <div className='px-14 flex'>
-                    <Image className='h-[40px] w-[28px]' src={logo} alt="logo" />
+                    <Image className='h-[40px] w-[28px]' width={100} src={logo} alt="logo" />
                     <div className='flex justify-center items-center w-full gap-20'>
                         <p>
                             How it works
@@ -31,13 +31,13 @@ const Navbar = () => {
 
             <div className='md:hidden block sticky'>
                 <div className='w-screen px-5 flex'>
-                    <Image className='h-[30px] w-[18px]' src={logo} alt="logo" />
+                    <Image className='h-[30px] w-[18px]' width={100} src={logo} alt="logo" />
                     
                     <div className='flex justify-end w-screen items-center'>
                         <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1H19" stroke="#202020" stroke-width="1.5" stroke-linecap="round" />
-                            <path d="M1 7.13672H19" stroke="#202020" stroke-width="1.5" stroke-linecap="round" />
-                            <path d="M1 13.2725H19" stroke="#202020" stroke-width="1.5" stroke-linecap="round" />
+                            <path d="M1 1H19" stroke="#202020" strokeWidth="1.5" strokeLinecap="round" />
+                            <path d="M1 7.13672H19" stroke="#202020" strokeWidth="1.5" strokeLinecap="round" />
+                            <path d="M1 13.2725H19" stroke="#202020" strokeWidth="1.5" strokeLinecap="round" />
                         </svg>
                     </div>
                 </div>
