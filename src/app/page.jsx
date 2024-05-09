@@ -47,7 +47,7 @@ export default function Home() {
         </section>
       </div>
       <div className="flex justify-center flex-col items-center mt-14 mb-14">
-        <p className="text-2xl md:text-3xl lg:text-6xl font-semibold max-w-lg md:max-w-xl lg:max-w-4xl text-center">
+        <p className="text-2xl px-4 sm:px-0 md:text-3xl lg:text-6xl font-semibold max-w-lg md:max-w-xl lg:max-w-4xl text-center">
           ‘Firstlook‘: Where connections thrive and loneliness fades.
         </p>
         <p className="max-w-lg font-light text-sm md:text-base lg:text-lg px-5 sm:px-0 md:max-w-2xl lg:max-w-4xl text-center mt-4 lg:mt-8">
