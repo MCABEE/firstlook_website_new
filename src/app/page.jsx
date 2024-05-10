@@ -47,9 +47,9 @@ export default function Home() {
         </section>
       </div>
       <div className="flex justify-center flex-col items-center mt-14 mb-14">
-        <p className="text-2xl md:text-3xl lg:text-6xl font-semibold max-w-lg md:max-w-xl lg:max-w-4xl text-center">
+        <h2 className="text-2xl md:text-3xl lg:text-6xl font-semibold max-w-lg md:max-w-xl lg:max-w-4xl text-center">
           ‘Firstlook‘: Where connections thrive and loneliness fades.
-        </p>
+        </h2>
         <p className="max-w-lg font-light text-sm md:text-base lg:text-lg px-5 sm:px-0 md:max-w-2xl lg:max-w-4xl text-center mt-4 lg:mt-8">
           Offering a seamless journey from search to connection, chat, and beyond. With verified accounts and a trusted platform, finding your perfect match is easier. A new era of matchmaking, where simplicity meets security
           and love, is just a click away.
@@ -65,13 +65,12 @@ export default function Home() {
         <section className="bg-white rounded-3xl w-[95%]">
           <div className="lg:hidden block">
             <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-36 md:h-64 lg:h-96">
-              <Image src={img1} alt="" className="object-contain h-36 md:h-56 lg:h-52" />
+              <Image src={img1} alt="verified-profile" className="object-contain h-36 md:h-56 lg:h-52" />
             </div>
           </div>
           <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-12 lg:flex-row lg:justify-between">
             <div className="flex flex-col justify-center sm:p-6 rounded-sm lg:max-w-md xl:max-w-4xl text-left">
-              <h1 className="text-2xl font-semibold md:text-5xl lg:text-4xl xl:text-6xl">Verified profiles, genuine connections !
-              </h1>
+              <h2 className="text-2xl font-semibold md:text-5xl lg:text-4xl xl:text-6xl">Verified profiles, genuine connections !</h2>
               <p className="mt-6 mb-6 text-sm md:text-base lg:text-lg sm:mb-6 max-w-lg font-light">Experience peace of mind with our stringent verification process. Connect confidently with active and authentic profiles, ensuring meaningful connections every time. </p>
               <div className="flex items-center font-light flex-row space-y-0 space-x-2 justify-start">
                 <p>
@@ -85,7 +84,7 @@ export default function Home() {
             </div>
             <div className="lg:block hidden">
               <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 lg:h-96">
-                <Image src={img1} alt="" className="object-contain h-48 lg:h-52" />
+                <Image src={img1} alt="verified-profile" className="object-contain h-48 lg:h-52" />
               </div>
             </div>
           </div>
@@ -95,7 +94,7 @@ export default function Home() {
         <section className="w-[95%]">
           <div className="lg:hidden block">
             <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-96">
-              <Image src={reel1} alt="" className="object-contain h-96" />
+              <Image src={reel1} alt="reel" className="object-contain h-96" />
             </div>
           </div>
           <div className="container flex flex-col justify-center p-5 sm:p-6 mx-auto sm:py-12 lg:py-56 lg:flex-row lg:justify-between">
@@ -118,9 +117,9 @@ export default function Home() {
                   <path d="M25.25 39.3503V35.7503C25.25 31.1303 28.52 29.2403 32.51 31.5503L35.63 33.3503L38.75 35.1503C42.74 37.4603 42.74 41.2403 38.75 43.5503L35.63 45.3503L32.51 47.1503C28.52 49.4603 25.25 47.5703 25.25 42.9503V39.3503Z" stroke="#444444" strokeWidth="4" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
-              <h1 className="text-xl font-semibold md:text-5xl lg:text-3xl xl:text-6xl mt-6">Video Reels <br />
+              <h2 className="text-xl font-semibold md:text-5xl lg:text-3xl xl:text-6xl mt-6">Video Reels <br />
                 bring your profile to life !
-              </h1>
+              </h2>
               <p className="mt-5 mb-4 text-sm md:text-base lg:text-lg sm:mb-6 max-w-lg font-light">Showcase your personality like never before. With Video Reels, let your charisma shine through movement, music, and more ! </p>
               <div className="flex items-center font-light flex-row space-y-0 space-x-2 justify-start">
                 <p>
@@ -134,7 +133,7 @@ export default function Home() {
             </div>
             <div className="lg:block hidden">
               <div className="flex items-center w-[95%] mt-8 lg:mt-0 h-72 lg:h-96 -ml-20">
-                <Image src={reel1} alt="" className="" />
+                <Image src={reel1} alt="reel" className="" />
               </div>
             </div>
           </div>
@@ -144,7 +143,7 @@ export default function Home() {
         <section className="bg-white rounded-3xl w-[95%]">
           <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
             <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96">
-              <Image src={feed1} alt="" className="object-contain h-72 sm:h-80 lg:h-96 lg:ml-56" />
+              <Image src={feed1} alt="feed" className="object-contain h-72 sm:h-80 lg:h-96 lg:ml-56" />
             </div>
             <div className="flex flex-col justify-center sm:p-6 rounded-sm lg:max-w-md xl:max-w-4xl text-right">
               <div className="sm:hidden block mt-10">
@@ -171,7 +170,7 @@ export default function Home() {
                   </svg>
                 </div>
               </div>
-              <h1 className="text-xl font-semibold md:text-5xl lg:text-4xl xl:text-5xl ">Elevate your connections with favorites and proposals!</h1>
+              <h2 className="text-xl font-semibold md:text-5xl lg:text-4xl xl:text-5xl ">Elevate your connections with favorites and proposals!</h2>
               <p className="mt-6 mb-6 text-sm md:text-base lg:text-lg sm:mb-6 max-w-md flex ml-auto font-light">Forge meaningful connections effortlessly. Save your favorites, unlock mutual interest, and take the next step with direct proposals.</p>
               <div className="flex items-center font-light flex-row space-y-0 space-x-2 justify-end">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -193,7 +192,7 @@ export default function Home() {
         <section className="bg-[#403D4D] text-white rounded-3xl w-[95%]">
           <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
             <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96">
-              <Image src={chat1} alt="" className="object-contain h-72 sm:h-80 lg:h-96 lg:ml-40" />
+              <Image src={chat1} alt="chat" className="object-contain h-72 sm:h-80 lg:h-96 lg:ml-40" />
             </div>
             <div className="flex flex-col justify-center sm:p-6 rounded-sm lg:max-w-md xl:max-w-4xl text-right">
               <div className="sm:hidden block mt-10">
@@ -214,8 +213,7 @@ export default function Home() {
                   </svg>
                 </div>
               </div>
-              <h1 className="text-2xl font-semibold md:text-5xl lg:text-4xl xl:text-5xl">Chat beyond words !
-              </h1>
+              <h2 className="text-2xl font-semibold md:text-5xl lg:text-4xl xl:text-5xl">Chat beyond words !</h2>
               <p className="mt-6 mb-6 text-sm md:text-base lg:text-lg sm:mb-6 max-w-md flex ml-auto font-light">Experience seamless communication. From text to images to voice,
                 our chat feature brings conversations to life like never before.</p>
               <div className="flex items-center font-light flex-row space-y-0 space-x-2 justify-end">
