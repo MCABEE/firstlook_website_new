@@ -288,7 +288,7 @@ export default function Home() {
                 </div>
               </div>
               <hr className="border-gray-600" />
-              <div className="flex mb-8 flex-row mt-8">
+              <div className="flex mb-4 flex-row mt-8">
                 <div className="flex space-x-1 items-center text-xl text-black">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 19C5.032 19 1 14.968 1 10C1 5.032 5.032 1 10 1C14.968 1 19 5.032 19 10C19 14.968 14.968 19 10 19Z" stroke="#292D32" strokeLinecap="round" strokeLinejoin="round" />
