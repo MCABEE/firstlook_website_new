@@ -68,9 +68,9 @@ export default function Home() {
         </section>
       </div>
       <div className="flex justify-center flex-col items-center mt-14 mb-14">
-        <p className="text-2xl px-4 sm:px-0 md:text-3xl lg:text-6xl font-semibold max-w-lg md:max-w-xl lg:max-w-4xl text-center">
+        <h2 className="text-2xl md:text-3xl lg:text-6xl font-semibold max-w-lg md:max-w-xl lg:max-w-4xl text-center">
           ‘Firstlook‘: Where connections thrive and loneliness fades.
-        </p>
+        </h2>
         <p className="max-w-lg font-light text-sm md:text-base lg:text-lg px-5 sm:px-0 md:max-w-2xl lg:max-w-4xl text-center mt-4 lg:mt-8">
           Offering a seamless journey from search to connection, chat, and beyond. With verified accounts and a trusted platform, finding your perfect match is easier. A new era of matchmaking, where simplicity meets security
           and love, is just a click away.
@@ -86,7 +86,7 @@ export default function Home() {
         <section className="bg-white rounded-3xl w-[95%] xl:w-[1150px]">
           <div className="lg:hidden block">
             <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-36 md:h-64 lg:h-96">
-              <Image src={img1} alt="" className="object-contain h-36 md:h-56 lg:h-52" />
+              <Image src={img1} alt="verified-profile" className="object-contain h-36 md:h-56 lg:h-52" />
             </div>
           </div>
           <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-12 lg:flex-row lg:justify-between">
@@ -106,7 +106,7 @@ export default function Home() {
             </div>
             <div className="lg:block hidden">
               <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 lg:h-96">
-                <Image src={img1} alt="" className="object-contain h-48 lg:h-52" />
+                <Image src={img1} alt="verified-profile" className="object-contain h-48 lg:h-52" />
               </div>
             </div>
           </div>
@@ -116,7 +116,7 @@ export default function Home() {
         <section className="w-[95%] xl:w-[1150px]">
           <div className="lg:hidden block">
             <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-96">
-              <Image src={reel1} alt="" className="object-contain h-96" />
+              <Image src={reel1} alt="reel" className="object-contain h-96" />
             </div>
           </div>
           <div className="container flex flex-col justify-center p-5 sm:p-6 mx-auto sm:py-12 lg:py-56 lg:flex-row lg:justify-between">
@@ -141,7 +141,7 @@ export default function Home() {
               </div>
               <h1 className="text-2xl font-semibold md:text-5xl lg:text-5xl xl:text-5xl mt-6">Video Reels <br />
                 bring your profile to life !
-              </h1>
+              </h2>
               <p className="mt-5 mb-4 text-sm md:text-base lg:text-lg sm:mb-6 max-w-lg font-light">Showcase your personality like never before. With Video Reels, let your charisma shine through movement, music, and more ! </p>
               <div className="flex items-center font-light flex-row space-y-0 space-x-2 justify-start">
                 <p>
