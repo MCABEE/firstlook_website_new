@@ -141,7 +141,7 @@ export default function Home() {
               </div>
               <h1 className="text-2xl font-semibold md:text-5xl lg:text-5xl xl:text-5xl mt-6">Video Reels <br />
                 bring your profile to life !
-              </h2>
+              </h1>
               <p className="mt-5 mb-4 text-sm md:text-base lg:text-lg sm:mb-6 max-w-lg font-light">Showcase your personality like never before. With Video Reels, let your charisma shine through movement, music, and more ! </p>
               <div className="flex items-center font-light flex-row space-y-0 space-x-2 justify-start">
                 <p>
