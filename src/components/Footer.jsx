@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import logo2 from '../../public/asset/logo_2.png'
+import Link from 'next/link'
 
 const Footer = () => {
     return (
@@ -114,7 +115,7 @@ const Footer = () => {
                         <a className="cursor-pointer text-black"> Help Center</a>
                         <a className="cursor-pointer text-black">Press</a>
                         <a className="cursor-pointer text-black">Company</a>
-                        <a className="cursor-pointer text-black">Contact</a>
+                        <Link href='/contact' className="cursor-pointer text-black">Contact</Link>
                     </div>
                     <div className="flex space-x-2 items-center text-base text-black">
                         <p>

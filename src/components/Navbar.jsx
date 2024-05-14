@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import logo from '../../public/asset/fs_logo.png'
 import { useState } from 'react'
+import Link from 'next/link'
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -79,9 +80,9 @@ const Navbar = () => {
                             <p>
                                 Press
                             </p>
-                            <p>
+                            <Link href='/contact' >
                                 Contact
-                            </p>
+                            </Link>
                         </div>
                     </div>
                 </div>
