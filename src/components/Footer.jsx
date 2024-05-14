@@ -7,7 +7,7 @@ const Footer = () => {
         <>
             <div className="lg:block hidden">
                 <div className="w-full mt-20 flex items-center justify-center">
-                    <div className="md:w-[95%] w-full px-4 text-white flex flex-col">
+                    <div className="md:w-[95%] xl:w-[1150px] w-full px-4 text-white flex flex-col">
                         <div className="flex flex-col">
                             <div className="flex mb-8 flex-row">
                                 <div>

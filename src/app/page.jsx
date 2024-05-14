@@ -29,7 +29,7 @@ export default function Home() {
   }, []);
   return (
     <div className='font-sans'>
-      <div className={isScrolled ? 'fixed top-0 w-full z-10 bg-[#FCF5EB] py-5 opacity-95 shadow-md' : 'relative mt-5 mb-5'}>
+      <div className={isScrolled ? 'fixed top-0 w-full z-10 bg-[#FCF5EB] py-5 opacity-95 border-b border-gray-300' : 'relative mt-5 mb-5'}>
         <Navbar />
       </div>
       <div className="flex justify-center">
