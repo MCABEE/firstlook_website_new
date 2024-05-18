@@ -114,7 +114,7 @@ const Download = () => {
 
                     :
 
-                    <div className="flex justify-center items-center mt-16 mb-14">
+                    <div className="flex justify-center items-center lg:mt-16 mb-14">
                         <section className="bg-white rounded-3xl w-[95%] xl:w-[1150px]">
                             <div className="lg:hidden block">
                                 <div className="container flex flex-col justify-center mx-auto ">
