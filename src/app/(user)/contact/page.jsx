@@ -1,31 +1,7 @@
-"use client"
-import Navbar from '@/components/Navbar'
-import { useEffect, useState } from "react";
-
 const Contact = () => {
-    const [isScrolled, setIsScrolled] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 0) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
     return (
         <>
-            <div className='font-sans'>
-                <div className={isScrolled ? 'fixed top-0 w-full z-10 bg-[#FCF5EB] py-5 opacity-95 border-b border-gray-300' : 'relative mt-5 mb-5'}>
-                    <Navbar />
-                </div>
+            <div className='font-sans mt-28 md:mt-32 mb-10'>
                 <div className="flex justify-center items-center">
                     <section className="bg-white px-7 py-12 sm:px-16 sm:py-16 md:px-20 md:py-16 xl:px-28 xl:py-16 h-fit rounded-3xl w-[95%] xl:w-[1150px]">
                         <p className='font-semibold text-[28px] sm:text-5xl mb-5'>

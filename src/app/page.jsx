@@ -1,38 +1,17 @@
 "use client"
-import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import img1 from '../../public/asset/img_1.png'
 import reel1 from '../../public/asset/reel_1.png'
 import feed1 from '../../public/asset/feed_1.png'
 import chat1 from '../../public/asset/chat_1.png'
 import chat2 from '../../public/asset/chat_2.png'
-import { useEffect, useState } from "react";
 import Footer from "@/components/Footer";
 
 export default function Home() {
-  const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
   return (
     <div className='font-sans'>
-      <div className={isScrolled ? 'fixed top-0 w-full z-10 bg-[#FCF5EB] py-5 opacity-95 border-b border-gray-300' : 'relative mt-5 mb-5'}>
-        <Navbar />
-      </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-28 md:mt-32">
         <section className="w-[95%] relative rounded-3xl bg-[url('../../public/asset/hero_bg_new.png')] bg-cover bg-center bg-no-repeat">
           <div className="relative mx-auto max-w-screen-xl px-6 sm:px-20 py-28 lg:py-28 lg:flex lg:items-center lg:px-16">
             <div className="max-w-xl text-left mt-72 sm:mt-36">
@@ -279,7 +258,7 @@ export default function Home() {
         </div>
       </div>
       <div>
-        <Footer/>
+        <Footer />
       </div>
     </div>
   );
