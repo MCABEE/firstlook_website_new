@@ -1,16 +1,18 @@
 "use client"
-import Image from 'next/image'
-import logo from '../../public/asset/fs_logo.png'
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+import logo from '../../public/asset/fs_logo.png'
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
     return (
-        <>
+        <nav className={'fixed top-0 w-full z-10 bg-[#FCF5EB] py-5 opacity-95 border-b border-gray-300'}>
             <div className='md:block hidden'>
                 <div className='px-14 flex'>
-                    <Image className='h-[40px] w-[28px]' width={100} src={logo} alt="logo" />
+                    <Link href={'/'}>
+                        <Image className='h-[40px] w-[28px]' width={100} src={logo} alt="logo" />
+                    </Link>
                     <div className='flex justify-center text-lg font-semibold items-center w-full gap-20'>
                         <p>
                             How it works
@@ -55,7 +57,7 @@ const Navbar = () => {
                             </div>
                         </div>
 
-                        <div className='flex flex-col justify-center items-center h-screen text-xl font-semibold space-y-5 -mt-8'>
+                        <nav className='flex flex-col justify-center items-center h-screen text-xl font-semibold space-y-5 -mt-8'>
                             <p>
                                 Home
                             </p>
@@ -83,13 +85,15 @@ const Navbar = () => {
                             <Link href='/contact' >
                                 Contact
                             </Link>
-                        </div>
+                        </nav>
                     </div>
                 </div>
                 :
                 <div className='md:hidden block'>
                     <div className='w-screen px-5 flex'>
-                        <Image className='h-[30px] w-[18px]' width={100} src={logo} alt="logo" />
+                        <Link href={"/"}>
+                            <Image className='h-[30px] w-[18px]' width={100} src={logo} alt="logo" />
+                        </Link>
 
                         <div onClick={() => { setIsOpen(true) }} className='flex justify-end w-screen items-center'>
                             <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -100,7 +104,7 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>}
-        </>
+        </nav>
     )
 }
 
