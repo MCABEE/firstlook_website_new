@@ -214,8 +214,8 @@ const Download = () => {
                                 </div>
                                 <div className='block sm:hidden mt-8'>
                                     <svg width="37" height="4" viewBox="0 0 37 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M2 2H22" stroke="#444444" stroke-width="3" stroke-linecap="round" />
-                                        <path d="M29 2H35" stroke="#BBBBBB" stroke-width="3" stroke-linecap="round" />
+                                        <path d="M15 2H35" stroke="#444444" stroke-width="3" stroke-linecap="round" />
+                                        <path d="M2 2H8" stroke="#BBBBBB" stroke-width="3" stroke-linecap="round" />
                                     </svg>
                                 </div>
                             </div>
