@@ -1,39 +1,17 @@
 "use client"
 import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar'
 import Image from 'next/image';
 import android from '../../../../public/asset/android.png'
 import ios from '../../../../public/asset/ios.png'
 import android_2 from '../../../../public/asset/android_2.png'
 import ios_2 from '../../../../public/asset/ios_2.png'
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Download = () => {
-    const [isScrolled, setIsScrolled] = useState(false);
     const [isTapped, setIsTapped] = useState("Android")
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 0) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
     return (
         <>
             <div className='font-sans'>
-                <div className={isScrolled ? 'fixed top-0 w-full z-10 bg-[#FCF5EB] py-5 opacity-95 border-b border-gray-300' : 'relative mt-5 mb-5'}>
-                    <Navbar />
-                </div>
-
                 {isTapped === 'Android' ?
                     <div className="flex justify-center items-center lg:mt-16 mb-14">
                         <section className="bg-white rounded-3xl w-[95%] xl:w-[1150px]">
