@@ -6,12 +6,21 @@ import ios from '../../../../public/asset/ios.png'
 import android_2 from '../../../../public/asset/android_2.png'
 import ios_2 from '../../../../public/asset/ios_2.png'
 import { useState } from "react";
+import { useSwipeable } from 'react-swipeable';
 
 const Download = () => {
     const [isTapped, setIsTapped] = useState("Android")
+
+    const handlers = useSwipeable({
+        onSwipedLeft: () => setIsTapped('IOS'),
+        onSwipedRight: () => setIsTapped('Android'),
+        preventDefaultTouchmoveEvent: true,
+        trackMouse: true
+    });
+
     return (
         <>
-            <div className='font-sans'>
+            <div className='font-sans mt-20 md:mt-24' {...handlers}>
                 {isTapped === 'Android' ?
                     <div className="flex justify-center items-center lg:mt-16 mb-14">
                         <section className="bg-white rounded-3xl w-[95%] xl:w-[1150px]">

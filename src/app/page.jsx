@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <div className='font-sans'>
-      <div className="flex justify-center mt-28 md:mt-32">
+      <div className="flex justify-center mt-20 md:mt-24">
         <section className="w-[95%] relative rounded-3xl bg-[url('../../public/asset/hero_bg_new.png')] bg-cover bg-center bg-no-repeat">
           <div className="relative mx-auto max-w-screen-xl px-6 sm:px-20 py-28 lg:py-28 lg:flex lg:items-center lg:px-16">
             <div className="max-w-xl text-left mt-72 sm:mt-36">
