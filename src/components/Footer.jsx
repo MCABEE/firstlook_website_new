@@ -19,11 +19,11 @@ const Footer = () => {
                                     </svg>
                                 </div>
                                 <div className="flex justify-center items-end w-full space-x-12">
-                                    <a className="hidden md:block cursor-pointer text-gray-600">T&C, Policy</a>
+                                    <Link href='/policy' className="hidden md:block cursor-pointer text-gray-600">T&C, Policy</Link>
                                     <a className="hidden md:block cursor-pointer text-gray-600"> Help Center</a>
                                     <a className="hidden md:block cursor-pointer text-gray-600">Press</a>
                                     <a className="hidden md:block cursor-pointer text-gray-600">Company</a>
-                                    <a className="hidden md:block cursor-pointer text-gray-600">Contact</a>
+                                    <Link href='/contact' className="hidden md:block cursor-pointer text-gray-600">Contact</Link>
                                 </div>
                                 <div className="flex flex-row space-x-8 items-end justify-end">
                                     <a>
@@ -111,7 +111,7 @@ const Footer = () => {
                         </a>
                     </div>
                     <div className="w-full flex justify-center flex-col items-center space-y-5">
-                        <Link href='/policy'  className="cursor-pointer text-black">Terms & Policy</Link>
+                        <Link href='/policy' className="cursor-pointer text-black">Terms & Policy</Link>
                         <a className="cursor-pointer text-black"> Help Center</a>
                         <a className="cursor-pointer text-black">Press</a>
                         <a className="cursor-pointer text-black">Company</a>
