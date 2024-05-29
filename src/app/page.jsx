@@ -13,8 +13,8 @@ export default function Home() {
     <div className='font-sans'>
       <div className="flex justify-center mt-20 md:mt-24">
         <section className="w-[95%] relative rounded-3xl bg-[url('../../public/asset/hero_bg_new.png')] bg-cover bg-center bg-no-repeat">
-          <div className="relative mx-auto max-w-screen-xl px-6 sm:px-20 py-28 lg:py-28 lg:flex lg:items-center lg:px-16">
-            <div className="max-w-xl text-left mt-72 sm:mt-36">
+          <div className="relative mx-auto max-w-screen-xl px-6 sm:px-20 py-28 lg:py-36 lg:flex lg:items-center lg:px-16">
+            <div className="max-w-xl text-left mt-72 sm:mt-48">
               <h1 className="text-3xl text-white font-semibold sm:text-5xl">
                 Making Connections
               </h1>
