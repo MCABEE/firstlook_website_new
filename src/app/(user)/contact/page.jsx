@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 const Contact = () => {
     return (
         <>
@@ -10,9 +12,11 @@ const Contact = () => {
                         <p className='font-light w-3/4 text-[12px] sm:text-[21px]'>
                             We value your feedback and strive for continuous improvement. Share your thoughts on how we can enhance your experience, we’re dedicated to prioritizing your needs.
                         </p>
-                        <p className='w-3/4 text-[#FC3657] text-[12px] sm:text-[21px] font-medium'>
-                            compose your feedback here
-                        </p>
+                        <Link href='/feedback'>
+                            <p className='w-3/4 text-[#FC3657] text-[12px] sm:text-[21px] font-medium'>
+                                compose your feedback here
+                            </p>
+                        </Link>
                         <p className='font-semibold text-[28px] sm:text-5xl mt-6 sm:mt-14 mb-2 sm:mb-5'>
                             Contact
                         </p>
