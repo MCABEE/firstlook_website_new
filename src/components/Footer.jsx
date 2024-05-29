@@ -111,7 +111,7 @@ const Footer = () => {
                         </a>
                     </div>
                     <div className="w-full flex justify-center flex-col items-center space-y-5">
-                        <a className="cursor-pointer text-black">Terms & Policy</a>
+                        <Link href='/policy'  className="cursor-pointer text-black">Terms & Policy</Link>
                         <a className="cursor-pointer text-black"> Help Center</a>
                         <a className="cursor-pointer text-black">Press</a>
                         <a className="cursor-pointer text-black">Company</a>

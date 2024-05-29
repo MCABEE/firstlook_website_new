@@ -72,9 +72,9 @@ const Navbar = () => {
                             <p>
                                 Purchase
                             </p>
-                            <p>
+                            <Link href='/policy'>
                                 T&C
-                            </p>
+                            </Link>
                             <p>
                                 Help Center
                             </p>
