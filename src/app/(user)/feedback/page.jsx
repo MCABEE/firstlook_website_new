@@ -11,6 +11,7 @@ const Feedback = () => {
     const [phone, setPhone] = useState("")
     const [subject, setSubject] = useState("")
     const [message, setMessage] = useState("")
+    const [isOpen, setIsOpen] = useState(false)
 
     const [base64, setBase64] = useState('');
     const [preview, setPreview] = useState('');
@@ -82,8 +83,57 @@ const Feedback = () => {
                             <p className="text-[12px] sm:text-lg">
                                 I want to communicate you about
                             </p>
-                            <input type="text" className="border border-gray-400 rounded-md mt-2 py-1.5 px-2 w-[95%] md:w-[50%]" value={subject} onChange={(e) => setSubject(e.target.value)} />
+                            <div onClick={() => setIsOpen(true)} className="flex">
+                                <input type="text" placeholder="Select your reason" className="border border-gray-400 rounded-md mt-2 py-1.5 px-2 w-[95%] md:w-[50%]" value={subject} />
+                                <div className="-ml-7 mt-5">
+                                    <svg width="15" height="10" viewBox="0 0 21 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.0814 10C9.26724 10 8.45304 9.68595 7.83658 9.06949L0.252982 1.4859C-0.0843272 1.14859 -0.0843272 0.590291 0.252982 0.252982C0.590291 -0.0843272 1.1486 -0.0843272 1.4859 0.252982L9.06951 7.83657C9.62781 8.39487 10.5351 8.39487 11.0934 7.83657L18.677 0.252982C19.0143 -0.0843272 19.5726 -0.0843272 19.9099 0.252982C20.2472 0.590291 20.2472 1.14859 19.9099 1.4859L12.3263 9.06949C11.7098 9.68595 10.8956 10 10.0814 10Z" fill="#444444" />
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
+                        {
+                            isOpen ?
+                                <div className='bg-white border border-[#444444] rounded-xl mt-4 p-4 w-[95%] md:w-[50%]'>
+                                    <div className='flex flex-col text-[16px] font-light'>
+                                        <p onClick={() => {
+                                            setSubject("new account signup")
+                                            setIsOpen(false)
+                                        }
+                                        } className='mt-2 cursor-pointer'>
+                                            new account signup
+                                        </p>
+                                        <p onClick={() => {
+                                            setSubject("technical support")
+                                            setIsOpen(false)
+                                        }
+                                        } className='mt-2 cursor-pointer'>
+                                            technical support
+                                        </p>
+                                        <p onClick={() => {
+                                            setSubject("payment issues")
+                                            setIsOpen(false)
+                                        }
+                                        } className='mt-2 cursor-pointer'>
+                                            payment issues
+                                        </p>
+                                        <p onClick={() => {
+                                            setSubject("feedback")
+                                            setIsOpen(false)
+                                        }
+                                        } className='mt-2 cursor-pointer'>
+                                            feedback
+                                        </p>
+                                        <p onClick={() => {
+                                            setSubject("business relations")
+                                            setIsOpen(false)
+                                        }
+                                        } className='mt-2 cursor-pointer mb-2'>
+                                            business relations
+                                        </p>
+                                    </div>
+                                </div> : ''
+                        }
                         <div className="mt-8">
                             <p className="text-[12px] sm:text-lg">
                                 Write in detail
