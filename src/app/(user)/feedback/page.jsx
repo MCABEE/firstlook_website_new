@@ -58,6 +58,7 @@ const Feedback = () => {
             dropzone.removeEventListener('dragover', handleDragOver);
             dropzone.removeEventListener('drop', handleDrop);
         };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const uploadFeedback = async () => {
