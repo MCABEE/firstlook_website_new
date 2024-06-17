@@ -5,8 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "FirstLook",
-  description: "Connecting singles worldwide, effortlessly. Your reliable platform for matchmaking !",
+  title: "FirstLook: Connecting Singles Globally",
   icons: {
     icon: "/icon.png",
   },
