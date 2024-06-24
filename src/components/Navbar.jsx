@@ -77,7 +77,7 @@ const Navbar = () => {
                             <Link href='/membershippolicy'>
                                 T&C
                             </Link>
-                            <Link href='/pageunderconstruction'>
+                            <Link href='/helpcenter'>
                                 Help Center
                             </Link>
                             <Link href='/pageunderconstruction'>

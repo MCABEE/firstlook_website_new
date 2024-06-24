@@ -74,7 +74,7 @@ const HelpCenter = () => {
                                         className="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900"
                                         onClick={() => toggleFAQ(data?.id)}
                                     >
-                                        <h2 className="text-[12px] sm:text-[24px] font-medium">{data?.qns}</h2>
+                                        <h2 className="text-[12px] sm:text-[24px] mt-2 font-sans">{data?.qns}</h2>
 
                                         <span className="sm:block hidden">
                                             {openFAQ === data?.id ? (

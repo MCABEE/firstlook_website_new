@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "FirstLook: Connecting Singles Globally",
+  title: "Firstlook: Connecting Singles Globally",
   icons: {
     icon: "/icon.png",
   },

@@ -87,7 +87,7 @@ const Download = () => {
                                     <h1 className="text-2xl font-semibold sm:text-5xl xl:text-5xl sm:mt-2"> Download </h1>
                                     <p className="mt-3 sm:mt-6 text-sm sm:text-[21px] sm:leading-7 max-w-xs sm:max-w-lg font-light">Need to run on Android versions 6.0 and above in order to utilize our app efficiently. </p>
                                     <div className="flex items-center font-light flex-row justify-start">
-                                        <div className='sm:block hidden mt-14'>
+                                        <div className='sm:block hidden mt-14 cursor-pointer'>
                                             <Link href='https://play.google.com/store/apps/details?id=com.firstlookmatrimony.first_look&hl=en-IN'>
                                                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <circle cx="24" cy="24" r="24" fill="#FC3657" />
@@ -95,7 +95,7 @@ const Download = () => {
                                                 </svg>
                                             </Link>
                                         </div>
-                                        <div className='block sm:hidden mt-10'>
+                                        <div className='block sm:hidden mt-10 cursor-pointer'>
                                             <Link href='https://play.google.com/store/apps/details?id=com.firstlookmatrimony.first_look&hl=en-IN'>
                                                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <circle cx="18" cy="18" r="18" fill="#FC3657" />
@@ -192,13 +192,13 @@ const Download = () => {
                                     <h1 className="text-2xl font-semibold sm:text-5xl xl:text-5xl sm:mt-2"> Download </h1>
                                     <p className="mt-3 sm:mt-6 text-sm sm:text-[21px] sm:leading-7 max-w-xs sm:max-w-lg font-light">Need to run on iOS versions 10.0 and above in order to utilize our app efficiently.</p>
                                     <div className="flex items-center font-light flex-row justify-start">
-                                        <div onClick={() => toast.error('IOS Version Currently Not Available')} className='sm:block hidden mt-14'>
+                                        <div onClick={() => toast.error('IOS Version Currently Not Available')} className='sm:block hidden mt-14 cursor-pointer'>
                                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="24" cy="24" r="24" fill="#FC3657" />
                                                 <path d="M16.3333 34.3333H32.3333C33.0697 34.3333 33.6667 34.9303 33.6667 35.6667C33.6667 36.3417 33.1651 36.8995 32.5143 36.9878L32.3333 37H16.3333C15.597 37 15 36.403 15 35.6667C15 34.9917 15.5016 34.4338 16.1524 34.3455L16.3333 34.3333ZM24.1524 13.0122L24.3333 13C25.0083 13 25.5662 13.5016 25.6545 14.1524L25.6667 14.3333V28.0009L29.6759 23.994C30.1493 23.5207 30.89 23.4776 31.412 23.8649L31.5615 23.994C32.0349 24.4674 32.0779 25.2081 31.6906 25.7301L31.5615 25.8796L25.2761 32.165C24.8028 32.6384 24.062 32.6814 23.5401 32.2941L23.3905 32.165L17.1051 25.8796C16.5844 25.3589 16.5844 24.5147 17.1051 23.994C17.5785 23.5207 18.3192 23.4776 18.8412 23.8649L18.9907 23.994L23 28.0044V14.3333C23 13.6583 23.5016 13.1005 24.1524 13.0122Z" fill="white" />
                                             </svg>
                                         </div>
-                                        <div onClick={() => toast.error('IOS Version Currently Not Available')} className='block sm:hidden mt-10'>
+                                        <div onClick={() => toast.error('IOS Version Currently Not Available')} className='block sm:hidden mt-10 cursor-pointer'>
                                             <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="18" cy="18" r="18" fill="#FC3657" />
                                                 <path d="M12 25H24C24.5523 25 25 25.4477 25 26C25 26.5063 24.6238 26.9247 24.1357 26.9909L24 27H12C11.4477 27 11 26.5523 11 26C11 25.4937 11.3762 25.0753 11.8643 25.0091L12 25ZM17.8643 9.00913L18 9C18.5063 9 18.9247 9.37621 18.9909 9.86431L19 10V20.2507L22.0069 17.2455C22.362 16.8905 22.9175 16.8582 23.309 17.1487L23.4212 17.2455C23.7762 17.6005 23.8084 18.1561 23.518 18.5476L23.4212 18.6597L18.7071 23.3738C18.3521 23.7288 17.7965 23.7611 17.4051 23.4706L17.2929 23.3738L12.5788 18.6597C12.1883 18.2692 12.1883 17.636 12.5788 17.2455C12.9339 16.8905 13.4894 16.8582 13.8809 17.1487L13.9931 17.2455L17 20.2533V10C17 9.49374 17.3762 9.07535 17.8643 9.00913Z" fill="white" />
