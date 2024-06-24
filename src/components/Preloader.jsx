@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import logo from '../../public/asset/logo_1.png'
+import logo from '../../public/asset/logo_3.png'
 
 const Preloader = () => {
   return (
