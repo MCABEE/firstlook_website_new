@@ -9,9 +9,11 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion"
+import Preloader from "@/components/Preloader";
 
 export default function Home() {
   const [showDownloadButton, setShowDownloadButton] = useState(false);
+  const [loading, setLoading] = useState(true); // State for preloader
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,6 +35,17 @@ export default function Home() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  // Simulate loading time
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000); // Adjust the time as needed
+  }, []);
+
+  if (loading) {
+    return <Preloader />; // Show preloader while loading
+  }
   return (
     <div className='font-sans'>
       <div className="flex justify-center mt-20 md:mt-24">
