@@ -65,25 +65,25 @@ const Navbar = () => {
                             <Link onClick={() => { setIsOpen(false) }} href='/'>
                                 Home
                             </Link>
-                            <Link href='/pageunderconstruction'>
+                            <Link onClick={() => { setIsOpen(false) }} href='/pageunderconstruction'>
                                 How it works
                             </Link>
-                            <Link href='/pageunderconstruction'>
+                            <Link onClick={() => { setIsOpen(false) }} href='/pageunderconstruction'>
                                 Stories
                             </Link>
-                            <Link href='/pageunderconstruction'>
+                            <Link onClick={() => { setIsOpen(false) }} href='/pageunderconstruction'>
                                 Purchase
                             </Link>
-                            <Link href='/membershippolicy'>
+                            <Link onClick={() => { setIsOpen(false) }} href='/membershippolicy'>
                                 T&C
                             </Link>
-                            <Link href='/helpcenter'>
+                            <Link onClick={() => { setIsOpen(false) }} href='/helpcenter'>
                                 Help Center
                             </Link>
-                            <Link href='/pageunderconstruction'>
+                            <Link onClick={() => { setIsOpen(false) }} href='/pageunderconstruction'>
                                 Company
                             </Link>
-                            <Link href='/pageunderconstruction'>
+                            <Link onClick={() => { setIsOpen(false) }} href='/pageunderconstruction'>
                                 Press
                             </Link>
                             <Link onClick={() => { setIsOpen(false) }} href='/contact' >
