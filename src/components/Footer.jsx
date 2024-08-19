@@ -19,11 +19,13 @@ const Footer = () => {
                                     </svg>
                                 </div>
                                 <div className="flex justify-center items-end w-full space-x-12">
-                                    <Link href='/membershippolicy' className="hidden md:block cursor-pointer text-gray-600">T&C, Policy</Link>
+                                    <p className='text-black font-thin'>© 2024 Firstlook Networks. All rights reserved</p>
+
+                                    {/* <Link href='/membershippolicy' className="hidden md:block cursor-pointer text-gray-600">T&C, Policy</Link>
                                     <Link href='/helpcenter' className="hidden md:block cursor-pointer text-gray-600"> Help Center</Link>
                                     <Link href='/pageunderconstruction' className="hidden md:block cursor-pointer text-gray-600">Press</Link>
                                     <Link href='/pageunderconstruction' className="hidden md:block cursor-pointer text-gray-600">Company</Link>
-                                    <Link href='/contact' className="hidden md:block cursor-pointer text-gray-600">Contact</Link>
+                                    <Link href='/contact' className="hidden md:block cursor-pointer text-gray-600">Contact</Link> */}
                                 </div>
                                 <div className="flex flex-row space-x-8 items-end justify-end">
                                     <a href='https://www.facebook.com/firstlookappofficial?mibextid=ZbWKwL'>
@@ -48,8 +50,8 @@ const Footer = () => {
                                     </a>
                                 </div>
                             </div>
-                            <hr className="border-gray-300" />
-                            <div className="flex mb-4 flex-row mt-8">
+                            {/* <hr className="border-gray-300" /> */}
+                            {/* <div className="flex mb-4 flex-row mt-8">
                                 <div className="flex space-x-1 items-center text-xl text-black">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10 19C5.032 19 1 14.968 1 10C1 5.032 5.032 1 10 1C14.968 1 19 5.032 19 10C19 14.968 14.968 19 10 19Z" stroke="#292D32" strokeLinecap="round" strokeLinejoin="round" />
@@ -74,7 +76,7 @@ const Footer = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
@@ -111,13 +113,15 @@ const Footer = () => {
                         </a>
                     </div>
                     <div className="w-full flex justify-center flex-col items-center space-y-5">
-                        <Link href='/membershippolicy' className="cursor-pointer text-black">Terms & Policy</Link>
+                        <p className='text-black text-xl text-center font-thin'>© 2024 Firstlook Networks<br />All rights reserved</p>
+
+                        {/* <Link href='/membershippolicy' className="cursor-pointer text-black">Terms & Policy</Link>
                         <Link href='/helpcenter' className="cursor-pointer text-black"> Help Center</Link>
                         <Link href='/pageunderconstruction' className="cursor-pointer text-black">Press</Link>
                         <Link href='/pageunderconstruction' className="cursor-pointer text-black">Company</Link>
-                        <Link href='/contact' className="cursor-pointer text-black">Contact</Link>
+                        <Link href='/contact' className="cursor-pointer text-black">Contact</Link> */}
                     </div>
-                    <div className="flex space-x-2 items-center text-base text-black">
+                    {/* <div className="flex space-x-2 items-center text-base text-black">
                         <p>
                             2024
                         </p>
@@ -127,9 +131,9 @@ const Footer = () => {
                         </svg>
                         <p className="font-bold">MCABEE</p>
                         <p>Digital</p>
-                        {/* <Image src={logo2} className="h-5 w-3" alt="logo"></Image> */}
-                    </div>
-                    <div className="flex">
+                        <Image src={logo2} className="h-5 w-3" alt="logo"></Image>
+                    </div> */}
+                    {/* <div className="flex">
                         <div className="flex items-center bg-white rounded-3xl border border-[#444444] text-black space-x-9 px-6 py-2">
                             <p>
                                 English
@@ -141,7 +145,7 @@ const Footer = () => {
                                 </svg>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </>

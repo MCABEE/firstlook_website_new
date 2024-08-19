@@ -40,7 +40,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 3000); // Adjust the time as needed
+    }, 1000); // Adjust the time as needed
   }, []);
 
   if (loading) {
@@ -258,7 +258,7 @@ export default function Home() {
               </div>
               <motion.h1 initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-                viewport={{ once: true, amount: 0.8 }} className="text-xl font-semibold md:text-5xl lg:text-5xl xl:text-5xl">Elevate your connections with favorites and proposals!</motion.h1>
+                viewport={{ once: true, amount: 0.8 }} className="text-xl font-semibold md:text-5xl lg:text-5xl xl:text-5xl">Elevate your connections with circle's and proposals!</motion.h1>
               <motion.p initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
                 viewport={{ once: true, amount: 0.8 }} className="mt-6 mb-6 text-sm md:text-base lg:text-lg sm:mb-6 max-w-md flex ml-auto font-light">Forge meaningful connections effortlessly. Save your favorites, unlock mutual interest, and take the next step with direct proposals.</motion.p>
