@@ -8,7 +8,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
     return (
         <nav className={'fixed top-0 w-full z-10 bg-[#FCF5EB] py-5 opacity-95 '}>
-            <div className='md:block hidden'>
+            <div className='lg:block hidden'>
                 <div className='px-14 flex'>
                     <Link href='/'>
                         <Image className='h-[40px] w-[28px]' src={logo} alt="logo" />
@@ -17,11 +17,17 @@ const Navbar = () => {
                         <Link href='/pageunderconstruction' className='cursor-pointer'>
                             How it works
                         </Link>
-                        <Link href='/pageunderconstruction' className='cursor-pointer'>
-                            Stories
+                        <Link href='/membershippolicy' className='cursor-pointer'>
+                            Policy
                         </Link>
-                        <Link href='/pageunderconstruction' className='cursor-pointer'>
-                            Purchase
+                        <Link href='/helpcenter' className='cursor-pointer'>
+                            Support
+                        </Link>
+                        <Link href='/about' className='cursor-pointer'>
+                            About
+                        </Link>
+                        <Link href='/contact' className='cursor-pointer'>
+                            Contact
                         </Link>
                     </div>
                     <div className='flex justify-end'>
@@ -40,7 +46,7 @@ const Navbar = () => {
 
 
             {isOpen ?
-                <div className='md:hidden block'>
+                <div className='lg:hidden block'>
                     <div className='h-screen'>
                         <div className='flex w-screen justify-between items-end px-4'>
                             <div className='flex justify-center'>
@@ -68,32 +74,23 @@ const Navbar = () => {
                             <Link onClick={() => { setIsOpen(false) }} href='/pageunderconstruction'>
                                 How it works
                             </Link>
-                            <Link onClick={() => { setIsOpen(false) }} href='/pageunderconstruction'>
-                                Stories
-                            </Link>
-                            <Link onClick={() => { setIsOpen(false) }} href='/pageunderconstruction'>
-                                Purchase
-                            </Link>
                             <Link onClick={() => { setIsOpen(false) }} href='/membershippolicy'>
-                                T&C
+                                Policy
                             </Link>
                             <Link onClick={() => { setIsOpen(false) }} href='/helpcenter'>
-                                Help Center
+                                Support
                             </Link>
-                            <Link onClick={() => { setIsOpen(false) }} href='/pageunderconstruction'>
-                                Company
+                            <Link onClick={() => { setIsOpen(false) }} href='/about'>
+                                About
                             </Link>
-                            <Link onClick={() => { setIsOpen(false) }} href='/pageunderconstruction'>
-                                Press
-                            </Link>
-                            <Link onClick={() => { setIsOpen(false) }} href='/contact' >
+                            <Link onClick={() => { setIsOpen(false) }} href='/contact'>
                                 Contact
                             </Link>
                         </nav>
                     </div>
                 </div>
                 :
-                <div className='md:hidden block'>
+                <div className='lg:hidden block'>
                     <div className='w-screen px-5 flex'>
                         <Link href={"/"}>
                             <Image className='h-[30px] w-[24px]' width={100} src={logo} alt="logo" />

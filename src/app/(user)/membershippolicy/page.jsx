@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import CircleIcon from '@mui/icons-material/Circle';
 import Link from 'next/link';
+import { motion } from "framer-motion"
 
 const MembershipPolicy = () => {
     const [list, setList] = useState(false)
@@ -81,7 +82,9 @@ const MembershipPolicy = () => {
 
                         </div>
 
-                        <div className='text-[#444444]'>
+                        <motion.div initial={{ y: "10vw", opacity: 0 }}
+                            whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.3 } }}
+                            viewport={{ once: true, amount: 0.1 }} className='text-[#444444]'>
                             <p className={list ? 'mt-8 sm:text-[21px] font-light' : 'mt-10 sm:mt-10 lg:mt-16 sm:text-[21px] font-light'}>
                                 Effective from: 2024 April 1
                             </p>
@@ -228,7 +231,8 @@ const MembershipPolicy = () => {
                             <p className="sm:text-[21px] mt-4 text-justify font-light">
                                 With love and regards
                             </p>
-                        </div>
+                        </motion.div>
+
 
                         <div className='mt-5 sm:block hidden'>
                             <svg width="105" height="19" viewBox="0 0 105 19" fill="none" xmlns="http://www.w3.org/2000/svg">

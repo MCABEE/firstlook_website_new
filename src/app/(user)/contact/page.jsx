@@ -1,15 +1,19 @@
+'use client'
 import Link from "next/link"
+import { motion } from "framer-motion"
 
 const Contact = () => {
     return (
         <>
             <div className='font-sans mt-20 md:mt-24 mb-10'>
                 <div className="flex justify-center items-center">
-                    <section className="bg-white px-7 py-12 sm:px-16 sm:py-16 md:px-20 md:py-16 xl:px-28 xl:py-16 h-fit rounded-3xl w-[95%] xl:w-[1150px]">
+                    <motion.section initial={{ y: "10vw", opacity: 0 }}
+                        whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.3 } }}
+                        viewport={{ once: true, amount: 0.1 }} className="bg-white px-7 py-12 sm:px-16 sm:py-16 md:px-20 md:py-16 xl:px-28 xl:py-16 h-fit rounded-3xl w-[95%] xl:w-[1150px]">
                         <p className='font-semibold text-[28px] sm:text-5xl mb-2 sm:mb-5'>
                             Feedback
                         </p>
-                        <p className='font-light w-3/4 text-[12px] sm:text-[21px]'>
+                        <p className='w-3/4 font-light text-[12px] sm:text-[21px]'>
                             We value your feedback and strive for continuous improvement. Share your thoughts on how we can enhance your experience, we’re dedicated to prioritizing your needs.
                         </p>
                         <Link href='/feedback'>
@@ -106,7 +110,8 @@ const Contact = () => {
                                 </a>
                             </div>
                         </div>
-                    </section>
+                    </motion.section>
+
                 </div>
             </div>
         </>
