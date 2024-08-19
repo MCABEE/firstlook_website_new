@@ -6,6 +6,7 @@ import Link from "next/link";
 import down from "../../../../public/asset/downarrow.png";
 import up from "../../../../public/asset/uparrow.png";
 import gov from "../../../../public/asset/gov.png";
+import linkedin from "../../../../public/asset/linkedin.png";
 import startup from "../../../../public/asset/startup.png";
 import team from "../../../../public/asset/team.png";
 import { motion } from "framer-motion"
@@ -24,17 +25,22 @@ const TimelineEvent = ({ date, description }) => (
 );
 
 const TeamMember = ({ name, role, description, imageClass }) => (
-    <div className="flex gap-5 max-md:flex-col">
+    <div className="flex gap-5 max-lg:flex-col">
         <div className="flex flex-col w-[27%] max-md:ml-0 max-md:w-full">
             <div className={`flex shrink-0 mx-auto ${imageClass} rounded-3xl h-[300px] w-[225px] max-md:mt-10`} />
         </div>
         <div className="flex flex-col ml-5 w-[73%] max-md:ml-0 max-md:w-full">
             <div className="flex flex-col ms:items-start mt-7 text-2xl text-black max-md:mt-10 max-md:max-w-full">
-                <h3 className="text-3xl font-semibold">{name}</h3>
-                <div>{role}</div>
-                <p className="self-stretch mt-3 font-light text-[14px] sm:text-[21px] text-neutral-800 max-md:max-w-full">
+                <h3 className="text-3xl md:text-left font-semibold">{name}</h3>
+                <div className="md:text-left">{role}</div>
+                <p className="self-stretch md:text-left mt-3 font-light text-[14px] sm:text-[21px] text-neutral-800 max-md:max-w-full">
                     {description}
                 </p>
+                <div className="flex flex-col lg:flex-row items-center md:items-start my-5">
+                    <a href="https://www.linkedin.com/in/shibinsebastian1986/" target="_blank" rel="noopener noreferrer">
+                        <Image src={linkedin} className="self-center lg:self-start" />
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -167,7 +173,7 @@ const About = () => {
                                     <Image loading="lazy"
                                         src={gov}
                                         alt="Government Of India"
-                                        className="object-contain w-[159px] max-w-full aspect-[1.64] max-md:mt-6"/>
+                                        className="object-contain w-[159px] max-w-full aspect-[1.64] max-md:mt-6" />
                                 </div>
                                 <div className="flex flex-col items-center w-full max-md:mt-6">
                                     <div className="text-lg font-light text-black text-center max-md:text-center">
