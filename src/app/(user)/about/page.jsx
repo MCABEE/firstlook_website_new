@@ -5,6 +5,8 @@ import { useState } from 'react';
 import Link from "next/link";
 import down from "../../../../public/asset/downarrow.png";
 import up from "../../../../public/asset/uparrow.png";
+import gov from "../../../../public/asset/gov.png";
+import startup from "../../../../public/asset/startup.png";
 import team from "../../../../public/asset/team.png";
 import { motion } from "framer-motion"
 
@@ -163,7 +165,7 @@ const About = () => {
                             <div className="flex flex-col md:flex-row gap-5 items-center max-md:flex-col">
                                 <div className="flex flex-col items-center w-full max-md:w-full">
                                     <Image loading="lazy"
-                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/b4626ca8ff7959ee9e071c12d4d0b11cdd3cfb8c938c2fb3dce5957cb92ead86?placeholderIfAbsent=true&apiKey=ea529c774f7747c3a88954cf0e97f43b"
+                                        src={gov}
                                         alt="Government Of India"
                                         className="object-contain w-[159px] max-w-full aspect-[1.64] max-md:mt-6"/>
                                 </div>
@@ -172,7 +174,7 @@ const About = () => {
                                         <div className="mb-3">A proud member of</div>
                                         <Image
                                             loading="lazy"
-                                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/573ccd0c87e89985a18d66a6242b694c4193cc0bc2157c0efd8b8a2daa283f0c?placeholderIfAbsent=true&apiKey=ea529c774f7747c3a88954cf0e97f43b"
+                                            src={startup}
                                             alt="Membership logo"
                                             className="object-contain aspect-[3.79] w-[277px] max-w-full"
                                         />
