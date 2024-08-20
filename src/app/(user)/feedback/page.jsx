@@ -142,7 +142,7 @@ const Feedback = () => {
                         whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.3 } }}
                         viewport={{ once: true, amount: 0.1 }} className="bg-white px-7 py-12 sm:px-16 sm:py-16 md:px-20 md:py-16 xl:px-28 xl:py-16 h-fit rounded-3xl w-[95%] xl:w-[1150px]">
                         <h1 className="text-xl md:text-[48px] font-semibold">
-                            Compose your Feedback
+                            Compose Your Feedback
                         </h1>
                         <div className="mt-14">
                             <p className="text-[12px] sm:text-lg">
@@ -180,31 +180,31 @@ const Feedback = () => {
                             <div ref={dropdownRef} className='bg-white border border-[#444444] rounded-xl mt-4 p-4 w-[100%] md:w-[50%]'>
                                 <div className='flex flex-col text-[16px] font-light'>
                                     <p onClick={() => {
-                                        setSubject("new account signup");
+                                        setSubject("New account signup");
                                         setIsOpen(false);
                                     }} className='mt-2 cursor-pointer'>
                                         New account signup
                                     </p>
                                     <p onClick={() => {
-                                        setSubject("technical support");
+                                        setSubject("Technical support");
                                         setIsOpen(false);
                                     }} className='mt-2 cursor-pointer'>
                                         Technical support
                                     </p>
                                     <p onClick={() => {
-                                        setSubject("payment issues");
+                                        setSubject("Payment issues");
                                         setIsOpen(false);
                                     }} className='mt-2 cursor-pointer'>
                                         Payment issues
                                     </p>
                                     <p onClick={() => {
-                                        setSubject("feedback");
+                                        setSubject("Feedback");
                                         setIsOpen(false);
                                     }} className='mt-2 cursor-pointer'>
                                         Feedback
                                     </p>
                                     <p onClick={() => {
-                                        setSubject("business relations");
+                                        setSubject("Business relations");
                                         setIsOpen(false);
                                     }} className='mt-2 cursor-pointer mb-2'>
                                         Business relations
@@ -216,7 +216,7 @@ const Feedback = () => {
                             <p className="text-[12px] sm:text-lg">
                                 Write in detail
                             </p>
-                            <textarea value={message} onChange={(e) => setMessage(e.target.value)} className="p-2 mt-2 focus:outline-1 focus:outline-blue-500 font-bold border-[0.1px] resize-none h-[120px] border-[#9EA5B1] rounded-md w-[100%] md:w-[50%]" />
+                            <textarea value={message} onChange={(e) => setMessage(e.target.value)} className="p-2 mt-2 focus:outline-1 focus:outline-blue-500  border-[0.1px] resize-none h-[120px] border-[#9EA5B1] rounded-md w-[100%] md:w-[50%]" />
                         </div>
                         <div className="mt-8">
                             <p className="text-[12px] sm:text-lg">
