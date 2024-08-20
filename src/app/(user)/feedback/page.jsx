@@ -77,6 +77,8 @@ const Feedback = () => {
         };
     }, [dropdownRef]);
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^[0-9]{10}$/;
     const uploadFeedback = async () => {
         try {
 
@@ -86,18 +88,27 @@ const Feedback = () => {
             }
 
             if (!email) {
-                toast.error('Enter Your Email')
-                return
+                toast.error('Enter Your Email');
+                return;
+            } else if (!emailRegex.test(email)) {
+                toast.error('Enter a valid Email');
+                return;
             }
 
             if (!name) {
-                toast.error('Enter Your Name')
-                return
+                toast.error('Enter Your Name');
+                return;
+            } else if (name.length < 3) {
+                toast.error('Name should be at least 3 characters');
+                return;
             }
 
             if (!phone) {
-                toast.error('Enter Your Phone')
-                return
+                toast.error('Enter Your Phone');
+                return;
+            } else if (!phoneRegex.test(phone)) {
+                toast.error('Enter a valid Phone number');
+                return;
             }
 
             if (!subject) {
@@ -106,8 +117,11 @@ const Feedback = () => {
             }
 
             if (!message) {
-                toast.error('Enter Message')
-                return
+                toast.error('Enter Your Message');
+                return;
+            } else if (message.split(' ').length < 3) {
+                toast.error('Message should be at least 3 words');
+                return;
             }
 
             else {
