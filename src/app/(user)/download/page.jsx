@@ -9,6 +9,7 @@ import { useState } from "react";
 import { useSwipeable } from 'react-swipeable';
 import Link from 'next/link';
 import toast, { Toaster } from 'react-hot-toast';
+import Navbar from '@/components/Navbar';
 
 const Download = () => {
     const [isTapped, setIsTapped] = useState("Android")
@@ -22,8 +23,9 @@ const Download = () => {
 
     return (
         <>
+            <Navbar fontcolor='black' />
             <div className='font-sans mt-20 md:mt-24' {...handlers}>
-                <Toaster/>
+                <Toaster />
                 {isTapped === 'Android' ?
                     <div className="flex justify-center items-center lg:mt-16 mb-14">
                         <section className="bg-white rounded-3xl w-[95%] xl:w-[1150px]">

@@ -10,6 +10,7 @@ import linkedin from "../../../../public/asset/linkedin.png";
 import startup from "../../../../public/asset/startup.png";
 import team from "../../../../public/asset/team.png";
 import { motion } from "framer-motion"
+import Navbar from "@/components/Navbar";
 
 
 const TimelineEvent = ({ date, description }) => (
@@ -62,6 +63,7 @@ const About = () => {
 
     return (
         <>
+            <Navbar fontcolor='black' />
             <div className='font-sans mb-10 flex flex-col items-center'>
                 <div className="w-[95%] xl:w-[1150px] justify-center mt-20">
                     <div className="text-center">

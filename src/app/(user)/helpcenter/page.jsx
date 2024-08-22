@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useState } from "react"
 import toast, { Toaster } from "react-hot-toast"
 import { motion } from "framer-motion"
+import Navbar from "@/components/Navbar"
 
 const HelpCenter = () => {
     const [search, setSearch] = useState("")
@@ -26,6 +27,7 @@ const HelpCenter = () => {
 
     return (
         <>
+            <Navbar fontcolor='black' />
             <div className='font-sans mt-20 md:mt-24 mb-10'>
                 <Toaster />
                 <div className="flex justify-center items-center">

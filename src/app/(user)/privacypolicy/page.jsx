@@ -2,11 +2,13 @@
 import { useState } from 'react';
 import CircleIcon from '@mui/icons-material/Circle';
 import Link from 'next/link';
+import Navbar from '@/components/Navbar';
 
 const PrivacyPolicyPage = () => {
     const [list, setList] = useState(false)
     return (
         <>
+            <Navbar fontcolor='black' />
             <div className='font-sans mt-20 md:mt-24 mb-10'>
                 <div className="flex justify-center items-center">
                     <section className="bg-white px-7 py-12 sm:px-16 sm:py-16 md:px-20 md:py-16 xl:px-28 xl:py-16 h-fit rounded-3xl w-[95%] xl:w-[1150px]">

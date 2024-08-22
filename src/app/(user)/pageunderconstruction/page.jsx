@@ -5,10 +5,12 @@ import coding from '../../../../public/asset/page_under_construction.png'
 import sign from '../../../../public/asset/Group.png'
 import Link from 'next/link'
 import { motion } from "framer-motion"
+import Navbar from '@/components/Navbar';
 
 const PageUnderConstruction = () => {
     return (
         <>
+            <Navbar fontcolor='black' />
             <motion.div initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.3 } }}
                 viewport={{ once: true, amount: 0.8 }} className="flex justify-center items-center font-sans mt-20 md:mt-36">
