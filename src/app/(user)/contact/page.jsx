@@ -1,10 +1,12 @@
 'use client'
 import Link from "next/link"
 import { motion } from "framer-motion"
+import Navbar from "@/components/Navbar"
 
 const Contact = () => {
     return (
         <>
+            <Navbar fontcolor='black' />
             <div className='font-sans mt-20 md:mt-24 mb-10'>
                 <div className="flex justify-center items-center">
                     <motion.section initial={{ y: "10vw", opacity: 0 }}

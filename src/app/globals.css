@@ -8,7 +8,16 @@
   --background-end-rgb: 252, 245, 235;
 }
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  font-family: antonia-variable, sans-serif;
+  font-style: normal;
+  font-variation-settings: "opsz" 8, "wght" 300;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,

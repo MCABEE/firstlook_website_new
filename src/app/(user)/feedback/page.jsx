@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { motion } from "framer-motion"
+import Navbar from "@/components/Navbar";
 
 const Feedback = () => {
     const [name, setName] = useState("");
@@ -149,6 +150,7 @@ const Feedback = () => {
 
     return (
         <>
+            <Navbar fontcolor='black' />
             <div className='font-sans mt-20 md:mt-24 mb-10'>
                 <Toaster />
                 <div className="flex justify-center items-center">
