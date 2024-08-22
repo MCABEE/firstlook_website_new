@@ -41,42 +41,47 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1000); // Adjust the time as needed
+    }, 1500); // Adjust the time as needed
   }, []);
 
   if (loading) {
     return <Preloader />; // Show preloader while loading
   }
   return (
-    <div className='font-sans'>
+    <div className=''>
       <Navbar fontcolor='white' />
-      <div className="flex justify-center mt-20 md:mt-0">
-        <section className="w-[100%] relative bg-[url('../../public/asset/hero_bg_new.png')] bg-cover bg-center bg-no-repeat">
+      <div className="flex justify-center mt-0">
+        <motion.section
+          className="w-[100%] h-screen relative bg-[url('../../public/asset/hero_bg_new.png')] bg-cover bg-center bg-no-repeat"
+          initial={{ y: "1vw", opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.15 } }}
+          viewport={{ once: true, amount: 0.1 }}
+        >
           <div className="relative mx-auto max-w-screen-xl px-6 sm:px-20 py-28 lg:py-36 lg:flex lg:items-center lg:px-16">
             <div className="max-w-xl text-left mt-72 sm:mt-48">
               <motion.h1 initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.15 } }}
-                viewport={{ once: true, amount: 0.8 }} className="text-3xl text-white font-semibold sm:text-5xl">
+                viewport={{ once: true, amount: 0.3 }} className="text-3xl text-white font-semibold sm:text-5xl">
                 Making Connections
               </motion.h1>
               <motion.h1 initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.2 } }}
-                viewport={{ once: true, amount: 0.8 }} className="text-3xl text-white font-semibold sm:text-5xl sm:mt-3">
+                viewport={{ once: true, amount: 0.3 }} className="text-3xl text-white font-semibold sm:text-5xl sm:mt-3">
                 Effortless
               </motion.h1>
 
               <motion.p initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.25 } }}
-                viewport={{ once: true, amount: 0.8 }} className="mt-3 max-w-lg text-sm md:text-base lg:text-lg font-light text-white">
+                viewport={{ once: true, amount: 0.3 }} className="mt-3 max-w-lg text-sm md:text-base lg:text-lg font-light text-white">
                 Connecting singles worldwide, effortlessly. <br />
                 your reliable platform for matchmaking !
               </motion.p>
 
               <motion.div initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.3 } }}
-                viewport={{ once: true, amount: 0.8 }} className="mt-5 flex flex-wrap gap-4 text-center">
+                viewport={{ once: true, amount: 0.3 }} className="mt-5 flex flex-wrap gap-4 text-center">
                 <Link href='/download'>
-                  <button className='flex items-center bg-[#FE1940] sm:px-7 px-6 py-2 text-sm sm:text-base text-white rounded-3xl gap-4'>
+                  <button className='flex items-center bg-[#FE1940] sm:px-7 px-6 py-2 text-sm sm:text-base text-white rounded-3xl gap-4 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95'>
                     Download
                     <div className="sm:hidden block">
                       <svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -93,28 +98,28 @@ export default function Home() {
               </motion.div>
             </div>
           </div>
-        </section>
+        </motion.section>
       </div>
       <div className="flex justify-center flex-col items-center mt-14 mb-14">
         <motion.h2 initial={{ y: "10vw", opacity: 0 }}
           whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-          viewport={{ once: true, amount: 0.8 }} className="text-2xl md:text-3xl lg:text-6xl font-semibold max-w-lg md:max-w-xl lg:max-w-4xl text-center px-2 sm:px-0">
+          viewport={{ once: true, amount: 0.3 }} className="text-2xl md:text-3xl lg:text-6xl font-semibold max-w-lg md:max-w-xl lg:max-w-4xl text-center px-2 sm:px-0">
           Firstlook: Where connections thrive and loneliness fades.
         </motion.h2>
         <motion.p initial={{ y: "10vw", opacity: 0 }}
           whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-          viewport={{ once: true, amount: 0.8 }} className="max-w-lg font-light text-sm md:text-base lg:text-lg px-5 sm:px-0 md:max-w-2xl lg:max-w-4xl text-center mt-4 lg:mt-8">
+          viewport={{ once: true, amount: 0.3 }} className="max-w-lg font-light text-sm md:text-base lg:text-lg px-5 sm:px-0 md:max-w-2xl lg:max-w-4xl text-center mt-4 lg:mt-8">
           Offering a seamless journey from search to connection, chat and beyond. With verified accounts and a t rusted platform, finding your perfect match is easier. A new era of matchmaking, where simplicity meets security
           and love, is just a click away. Say goodbye to complexities and hello to simplicity.
         </motion.p>
         {/* <motion.p initial={{ y: "10vw", opacity: 0 }}
           whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-          viewport={{ once: true, amount: 0.8 }} className="max-w-lg font-light text-sm md:text-base lg:text-lg px-5 sm:px-0 md:max-w-3xl lg:max-w-4xl text-center">
+          viewport={{ once: true, amount: 0.3 }} className="max-w-lg font-light text-sm md:text-base lg:text-lg px-5 sm:px-0 md:max-w-3xl lg:max-w-4xl text-center">
           Say goodbye to complexities and hello to simplicity.
         </motion.p> */}
         <motion.p initial={{ y: "10vw", opacity: 0 }}
           whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-          viewport={{ once: true, amount: 0.8 }} className="font-light text-center text-sm md:text-base lg:text-lg">
+          viewport={{ once: true, amount: 0.3 }} className="font-light text-center text-sm md:text-base lg:text-lg">
           ‘ firstlook_app ‘
         </motion.p>
       </div>
@@ -123,7 +128,7 @@ export default function Home() {
           <div className="lg:hidden block">
             <motion.div initial={{ y: "10vw", opacity: 0 }}
               whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.2 } }}
-              viewport={{ once: true, amount: 0.8 }} className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-36 md:h-64 lg:h-96">
+              viewport={{ once: true, amount: 0.3 }} className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-36 md:h-64 lg:h-96">
               <Image src={img1} alt="verified-profile" className="object-contain h-36 md:h-56 lg:h-52" />
             </motion.div>
           </div>
@@ -131,14 +136,14 @@ export default function Home() {
             <div className="flex flex-col justify-center sm:p-6 rounded-sm lg:max-w-md xl:max-w-4xl text-left">
               <motion.h1 initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-                viewport={{ once: true, amount: 0.8 }} className="text-2xl font-semibold md:text-5xl lg:text-5xl xl:text-5xl">Verified profiles, genuine connections !
+                viewport={{ once: true, amount: 0.3 }} className="text-2xl font-semibold md:text-5xl lg:text-5xl xl:text-5xl">Verified profiles, genuine connections !
               </motion.h1>
               <motion.p initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-                viewport={{ once: true, amount: 0.8 }} className="mt-6 mb-6 text-sm md:text-base lg:text-lg sm:mb-6 max-w-lg font-light">Experience peace of mind with our stringent verification process. Connect confidently with active and authentic profiles, ensuring meaningful connections every time. </motion.p>
+                viewport={{ once: true, amount: 0.3 }} className="mt-6 mb-6 text-sm md:text-base lg:text-lg sm:mb-6 max-w-lg font-light">Experience peace of mind with our stringent verification process. Connect confidently with active and authentic profiles, ensuring meaningful connections every time. </motion.p>
               <motion.div initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-                viewport={{ once: true, amount: 0.8 }} className="flex items-center font-light flex-row space-y-1 space-x-2 justify-start sm:mb-0 mb-1.5">
+                viewport={{ once: true, amount: 0.3 }} className="flex items-center font-light flex-row space-y-1 space-x-2 justify-start sm:mb-0 mb-1.5">
                 {/* <p>
                   Learn more
                 </p> */}
@@ -151,7 +156,7 @@ export default function Home() {
             <div className="lg:block hidden">
               <motion.div initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.2 } }}
-                viewport={{ once: true, amount: 0.8 }} className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 lg:h-96">
+                viewport={{ once: true, amount: 0.3 }} className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 lg:h-96">
                 <Image src={img1} alt="verified-profile" className="object-contain h-48 lg:h-52" />
               </motion.div>
             </div>
@@ -163,7 +168,7 @@ export default function Home() {
           <div className="lg:hidden block">
             <motion.div initial={{ y: "10vw", opacity: 0 }}
               whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.2 } }}
-              viewport={{ once: true, amount: 0.8 }} className="flex items-center justify-center p-6 mt-12 lg:mt-0 h-96">
+              viewport={{ once: true, amount: 0.3 }} className="flex items-center justify-center p-6 mt-12 lg:mt-0 h-96">
               <Image src={reel1} alt="reel" className="object-contain h-96" />
             </motion.div>
           </div>
@@ -172,7 +177,7 @@ export default function Home() {
               <div className="sm:hidden block mt-5">
                 <motion.svg initial={{ y: "10vw", opacity: 0 }}
                   whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-                  viewport={{ once: true, amount: 0.8 }} width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  viewport={{ once: true, amount: 0.3 }} width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M31 20.5V11.5C31 4 28 1 20.5 1H11.5C4 1 1 4 1 11.5V20.5C1 28 4 31 11.5 31H20.5C28 31 31 28 31 20.5Z" stroke="#444444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   <path d="M1.77734 8.66602H30.2173" stroke="#444444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   <path d="M10.7812 1.16602V8.45602" stroke="#444444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -183,7 +188,7 @@ export default function Home() {
               <div className="sm:block hidden">
                 <motion.svg initial={{ y: "10vw", opacity: 0 }}
                   whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-                  viewport={{ once: true, amount: 0.8 }} width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  viewport={{ once: true, amount: 0.3 }} width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M62 41V23C62 8 56 2 41 2H23C8 2 2 8 2 23V41C2 56 8 62 23 62H41C56 62 62 56 62 41Z" stroke="#444444" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
                   <path d="M3.55859 17.3311H60.4385" stroke="#444444" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
                   <path d="M21.5586 2.33105V16.9111" stroke="#444444" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
@@ -193,15 +198,15 @@ export default function Home() {
               </div>
               <motion.h1 initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-                viewport={{ once: true, amount: 0.8 }} className="text-2xl font-semibold md:text-5xl lg:text-5xl xl:text-5xl mt-6">Video Reels <br />
+                viewport={{ once: true, amount: 0.3 }} className="text-2xl font-semibold md:text-5xl lg:text-5xl xl:text-5xl mt-6">Video Reels <br />
                 bring your profile to life !
               </motion.h1>
               <motion.p initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-                viewport={{ once: true, amount: 0.8 }} className="mt-5 mb-4 text-sm md:text-base lg:text-lg sm:mb-6 max-w-lg font-light">Showcase your personality like never before. With Video Reels, let your charisma shine through movement, music, and more ! </motion.p>
+                viewport={{ once: true, amount: 0.3 }} className="mt-5 mb-4 text-sm md:text-base lg:text-lg sm:mb-6 max-w-lg font-light">Showcase your personality like never before. With Video Reels, let your charisma shine through movement, music, and more ! </motion.p>
               <motion.div initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-                viewport={{ once: true, amount: 0.8 }} className="flex items-center font-light flex-row space-y-1 space-x-2 justify-start sm:mb-0 mb-5">
+                viewport={{ once: true, amount: 0.3 }} className="flex items-center font-light flex-row space-y-1 space-x-2 justify-start sm:mb-0 mb-5">
                 {/* <p>
                   Learn more
                 </p> */}
@@ -214,7 +219,7 @@ export default function Home() {
             <div className="lg:block hidden">
               <motion.div initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.2 } }}
-                viewport={{ once: true, amount: 0.8 }} className="flex items-center w-[95%] mt-8 lg:mt-0 h-72 lg:h-96 -ml-5">
+                viewport={{ once: true, amount: 0.3 }} className="flex items-center w-[95%] mt-8 lg:mt-0 h-72 lg:h-96 -ml-5">
                 <Image src={reel1} alt="" className="" />
               </motion.div>
             </div>
@@ -226,7 +231,7 @@ export default function Home() {
           <div className="container flex flex-col justify-center p-6 lg:p-8 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
             <motion.div initial={{ y: "10vw", opacity: 0 }}
               whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.2 } }}
-              viewport={{ once: true, amount: 0.8 }} className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96">
+              viewport={{ once: true, amount: 0.3 }} className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96">
               <Image src={feed1} alt="" className="object-contain h-72 sm:h-80 lg:h-96" />
             </motion.div>
             <div className="flex flex-col justify-center sm:p-6 rounded-sm lg:max-w-3xl xl:max-w-4xl text-right">
@@ -234,7 +239,7 @@ export default function Home() {
                 <div className="flex justify-end mb-5">
                   <motion.svg initial={{ y: "10vw", opacity: 0 }}
                     whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-                    viewport={{ once: true, amount: 0.8 }} width="70" height="27" viewBox="0 0 70 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    viewport={{ once: true, amount: 0.3 }} width="70" height="27" viewBox="0 0 70 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="56.5" cy="13.5" r="13" fill="white" stroke="#444444" />
                     <circle cx="13.5" cy="13.5" r="13" fill="white" stroke="#444444" />
                     <path d="M13.8707 18.9971C13.6677 19.0688 13.3335 19.0688 13.1305 18.9971C11.3994 18.4057 7.53125 15.9387 7.53125 11.7572C7.53125 9.91135 9.01762 8.41797 10.8502 8.41797C11.9366 8.41797 12.8977 8.94364 13.5006 9.75604C14.1035 8.94364 15.0705 8.41797 16.151 8.41797C17.9836 8.41797 19.47 9.91135 19.47 11.7572C19.47 15.9387 15.6018 18.4057 13.8707 18.9971Z" fill="white" stroke="#444444" strokeLinecap="round" strokeLinejoin="round" />
@@ -248,7 +253,7 @@ export default function Home() {
                 <div className="flex justify-end mb-10">
                   <motion.svg initial={{ y: "10vw", opacity: 0 }}
                     whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-                    viewport={{ once: true, amount: 0.8 }} width="158" height="60" viewBox="0 0 158 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    viewport={{ once: true, amount: 0.3 }} width="158" height="60" viewBox="0 0 158 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="128" cy="30" r="29" fill="white" stroke="#444444" strokeWidth="2" />
                     <circle cx="30" cy="30" r="29" fill="white" stroke="#444444" strokeWidth="2" />
                     <path d="M31.3091 42.8787C30.8509 43.0404 30.0964 43.0404 29.6383 42.8787C25.7309 41.5438 17 35.9753 17 26.5371C17 22.3708 20.3549 19 24.4914 19C26.9436 19 29.1128 20.1865 30.4737 22.0202C31.8345 20.1865 34.0173 19 36.456 19C40.5924 19 43.9474 22.3708 43.9474 26.5371C43.9474 35.9753 35.2164 41.5438 31.3091 42.8787Z" fill="white" stroke="#444444" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round" />
@@ -260,13 +265,13 @@ export default function Home() {
               </div>
               <motion.h1 initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-                viewport={{ once: true, amount: 0.8 }} className="text-xl font-semibold md:text-5xl lg:text-5xl xl:text-5xl">Elevate your connections with circle&apos;s and proposals!</motion.h1>
+                viewport={{ once: true, amount: 0.3 }} className="text-xl font-semibold md:text-5xl lg:text-5xl xl:text-5xl">Elevate your connections with circle&apos;s and proposals!</motion.h1>
               <motion.p initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-                viewport={{ once: true, amount: 0.8 }} className="mt-6 mb-6 text-sm md:text-base lg:text-lg sm:mb-6 max-w-md flex ml-auto font-light">Forge meaningful connections effortlessly. Save your favorites, unlock mutual interest, and take the next step with direct proposals.</motion.p>
+                viewport={{ once: true, amount: 0.3 }} className="mt-6 mb-6 text-sm md:text-base lg:text-lg sm:mb-6 max-w-md flex ml-auto font-light">Forge meaningful connections effortlessly. Save your favorites, unlock mutual interest, and take the next step with direct proposals.</motion.p>
               <motion.div initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-                viewport={{ once: true, amount: 0.8 }} className="flex items-center font-light flex-row space-y-0 space-x-2 justify-end sm:mb-0 mb-5">
+                viewport={{ once: true, amount: 0.3 }} className="flex items-center font-light flex-row space-y-0 space-x-2 justify-end sm:mb-0 mb-5">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fillRule="evenodd" clipRule="evenodd" d="M12 22.5C9.21523 22.5 6.54451 21.3938 4.57538 19.4246C2.60625 17.4555 1.5 14.7848 1.5 12C1.5 9.21523 2.60625 6.54451 4.57538 4.57538C6.54451 2.60625 9.21523 1.5 12 1.5C14.7848 1.5 17.4555 2.60625 19.4246 4.57538C21.3938 6.54451 22.5 9.21523 22.5 12C22.5 14.7848 21.3938 17.4555 19.4246 19.4246C17.4555 21.3938 14.7848 22.5 12 22.5ZM12 24C8.8174 24 5.76515 22.7357 3.51472 20.4853C1.26428 18.2348 0 15.1826 0 12C0 8.8174 1.26428 5.76516 3.51472 3.51472C5.76515 1.26428 8.8174 0 12 0C15.1826 0 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24Z" fill="black" />
                   <path fillRule="evenodd" clipRule="evenodd" d="M18 12C18 12.1989 17.921 12.3896 17.7803 12.5303C17.6397 12.671 17.4489 12.75 17.25 12.75H8.5605L11.781 15.969C11.8507 16.0387 11.906 16.1215 11.9438 16.2126C11.9815 16.3037 12.0009 16.4014 12.0009 16.5C12.0009 16.5986 11.9815 16.6962 11.9438 16.7873C11.906 16.8785 11.8507 16.9612 11.781 17.031C11.7113 17.1007 11.6285 17.156 11.5374 17.1938C11.4463 17.2315 11.3486 17.2509 11.25 17.2509C11.1514 17.2509 11.0537 17.2315 10.9626 17.1938C10.8715 17.156 10.7887 17.1007 10.719 17.031L6.219 12.531C6.14915 12.4613 6.09374 12.3785 6.05593 12.2874C6.01812 12.1963 5.99866 12.0986 5.99866 12C5.99866 11.9013 6.01812 11.8036 6.05593 11.7125C6.09374 11.6214 6.14915 11.5386 6.219 11.469L10.719 6.96897C10.7887 6.89924 10.8715 6.84392 10.9626 6.80619C11.0537 6.76845 11.1514 6.74902 11.25 6.74902C11.3486 6.74902 11.4463 6.76845 11.5374 6.80619C11.6285 6.84392 11.7113 6.89924 11.781 6.96897C11.8507 7.0387 11.906 7.12149 11.9438 7.2126C11.9815 7.3037 12.0009 7.40136 12.0009 7.49997C12.0009 7.59859 11.9815 7.69624 11.9438 7.78735C11.906 7.87846 11.8507 7.96124 11.781 8.03097L8.5605 11.25H17.25C17.4489 11.25 17.6397 11.329 17.7803 11.4696C17.921 11.6103 18 11.8011 18 12Z" fill="black" />
@@ -287,7 +292,7 @@ export default function Home() {
           <div className="container flex flex-col justify-center p-6 lg:p-8 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
             <motion.div initial={{ y: "10vw", opacity: 0 }}
               whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.2 } }}
-              viewport={{ once: true, amount: 0.8 }} className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96">
+              viewport={{ once: true, amount: 0.3 }} className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96">
               <Image src={chat1} alt="" className="object-contain h-80 sm:h-96" />
             </motion.div>
             <div className="flex flex-col justify-center sm:p-6 rounded-sm lg:max-w-3xl xl:max-w-4xl text-right">
@@ -295,7 +300,7 @@ export default function Home() {
                 <div className="flex justify-end mb-5">
                   <motion.svg initial={{ y: "10vw", opacity: 0 }}
                     whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-                    viewport={{ once: true, amount: 0.8 }} width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/motion.">
+                    viewport={{ once: true, amount: 0.3 }} width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/motion.">
                     <path d="M10 13H16H22" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M10 18.3867H13H16" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M16 31C24.2842 31 31 24.2842 31 16C31 7.71572 24.2842 1 16 1C7.71572 1 1 7.71572 1 16C1 18.7321 1.73046 21.2936 3.00673 23.5L1.75 30.25L8.5 28.9933C10.7063 30.2695 13.2679 31 16 31Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -306,7 +311,7 @@ export default function Home() {
                 <div className="flex justify-end mb-10">
                   <motion.svg initial={{ y: "10vw", opacity: 0 }}
                     whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-                    viewport={{ once: true, amount: 0.8 }} width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    viewport={{ once: true, amount: 0.3 }} width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20.002 25.999H32.002H44.002" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M20.0039 36.7734H26.0039H32.0039" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M32 62C48.5684 62 62 48.5684 62 32C62 15.4314 48.5684 2 32 2C15.4314 2 2 15.4314 2 32C2 37.4642 3.46091 42.5873 6.01346 47L3.5 60.5L17 57.9866C21.4126 60.539 26.5358 62 32 62Z" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
@@ -315,15 +320,15 @@ export default function Home() {
               </div>
               <motion.h1 initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-                viewport={{ once: true, amount: 0.8 }} className="text-2xl font-semibold md:text-5xl lg:text-5xl xl:text-5xl">Chat beyond words !
+                viewport={{ once: true, amount: 0.3 }} className="text-2xl font-semibold md:text-5xl lg:text-5xl xl:text-5xl">Chat beyond words !
               </motion.h1>
               <motion.p initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-                viewport={{ once: true, amount: 0.8 }} className="mt-6 mb-6 text-sm md:text-base lg:text-lg sm:mb-6 max-w-md flex ml-auto font-light">Experience seamless communication. From text to images to voice,
+                viewport={{ once: true, amount: 0.3 }} className="mt-6 mb-6 text-sm md:text-base lg:text-lg sm:mb-6 max-w-md flex ml-auto font-light">Experience seamless communication. From text to images to voice,
                 our chat feature brings conversations to life like never before.</motion.p>
               <motion.div initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-                viewport={{ once: true, amount: 0.8 }} className="flex items-center font-light flex-row space-y-0 space-x-2 justify-end sm:mb-0 mb-2.5">
+                viewport={{ once: true, amount: 0.3 }} className="flex items-center font-light flex-row space-y-0 space-x-2 justify-end sm:mb-0 mb-2.5">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fillRule="evenodd" clipRule="evenodd" d="M12 22.5C9.21523 22.5 6.54451 21.3938 4.57538 19.4246C2.60625 17.4555 1.5 14.7848 1.5 12C1.5 9.21523 2.60625 6.54451 4.57538 4.57538C6.54451 2.60625 9.21523 1.5 12 1.5C14.7848 1.5 17.4555 2.60625 19.4246 4.57538C21.3938 6.54451 22.5 9.21523 22.5 12C22.5 14.7848 21.3938 17.4555 19.4246 19.4246C17.4555 21.3938 14.7848 22.5 12 22.5ZM12 24C8.8174 24 5.76515 22.7357 3.51472 20.4853C1.26428 18.2348 0 15.1826 0 12C0 8.8174 1.26428 5.76516 3.51472 3.51472C5.76515 1.26428 8.8174 0 12 0C15.1826 0 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24Z" fill="white" />
                   <path fillRule="evenodd" clipRule="evenodd" d="M18 12C18 12.1989 17.921 12.3896 17.7803 12.5303C17.6397 12.671 17.4489 12.75 17.25 12.75H8.5605L11.781 15.969C11.8507 16.0387 11.906 16.1215 11.9438 16.2126C11.9815 16.3037 12.0009 16.4014 12.0009 16.5C12.0009 16.5986 11.9815 16.6962 11.9438 16.7873C11.906 16.8785 11.8507 16.9612 11.781 17.031C11.7113 17.1007 11.6285 17.156 11.5374 17.1938C11.4463 17.2315 11.3486 17.2509 11.25 17.2509C11.1514 17.2509 11.0537 17.2315 10.9626 17.1938C10.8715 17.156 10.7887 17.1007 10.719 17.031L6.219 12.531C6.14915 12.4613 6.09374 12.3785 6.05593 12.2874C6.01812 12.1963 5.99866 12.0986 5.99866 12C5.99866 11.9013 6.01812 11.8036 6.05593 11.7125C6.09374 11.6214 6.14915 11.5386 6.219 11.469L10.719 6.96897C10.7887 6.89924 10.8715 6.84392 10.9626 6.80619C11.0537 6.76845 11.1514 6.74902 11.25 6.74902C11.3486 6.74902 11.4463 6.76845 11.5374 6.80619C11.6285 6.84392 11.7113 6.89924 11.781 6.96897C11.8507 7.0387 11.906 7.12149 11.9438 7.2126C11.9815 7.3037 12.0009 7.40136 12.0009 7.49997C12.0009 7.59859 11.9815 7.69624 11.9438 7.78735C11.906 7.87846 11.8507 7.96124 11.781 8.03097L8.5605 11.25H17.25C17.4489 11.25 17.6397 11.329 17.7803 11.4696C17.921 11.6103 18 11.8011 18 12Z" fill="white" />
@@ -339,33 +344,33 @@ export default function Home() {
       <div className="mt-16">
         <motion.p initial={{ y: "10vw", opacity: 0 }}
           whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-          viewport={{ once: true, amount: 0.8 }} className="mx-auto text-center w-72 sm:w-[500px]  md:w-[600px] lg:w-[1050px] text-[18px] sm:text-2xl md:text-3xl lg:text-4xl">
+          viewport={{ once: true, amount: 0.3 }} className="mx-auto text-center w-72 sm:w-[500px]  md:w-[600px] lg:w-[1050px] text-[18px] sm:text-2xl md:text-3xl lg:text-4xl">
           Ready to rewrite your love story?
         </motion.p>
         <div className="sm:block hidden">
           <motion.p initial={{ y: "10vw", opacity: 0 }}
             whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-            viewport={{ once: true, amount: 0.8 }} className="mx-auto text-center sm:w-[500px] md:w-[600px]  lg:w-[700px] text-[18px] sm:text-2xl md:text-3xl lg:text-4xl mt-2">
+            viewport={{ once: true, amount: 0.3 }} className="mx-auto text-center sm:w-[500px] md:w-[600px]  lg:w-[700px] text-[18px] sm:text-2xl md:text-3xl lg:text-4xl mt-2">
             Download now and start building your path
           </motion.p>
           <motion.p initial={{ y: "10vw", opacity: 0 }}
             whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-            viewport={{ once: true, amount: 0.8 }} className="mx-auto text-center sm:w-[500px] md:w-[600px]  lg:w-[700px] text-[18px] sm:text-2xl md:text-3xl lg:text-4xl mt-2">
+            viewport={{ once: true, amount: 0.3 }} className="mx-auto text-center sm:w-[500px] md:w-[600px]  lg:w-[700px] text-[18px] sm:text-2xl md:text-3xl lg:text-4xl mt-2">
             to happily ever after!
           </motion.p>
         </div>
         <div className="block sm:hidden">
           <motion.p initial={{ y: "10vw", opacity: 0 }}
             whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-            viewport={{ once: true, amount: 0.8 }} className="mx-auto text-center w-64 sm:w-[450px] text-[18px] sm:text-2xl">
+            viewport={{ once: true, amount: 0.3 }} className="mx-auto text-center w-64 sm:w-[450px] text-[18px] sm:text-2xl">
             Download now and start building your path to happily ever after!
           </motion.p>
         </div>
         <motion.div initial={{ y: "10vw", opacity: 0 }}
           whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-          viewport={{ once: true, amount: 0.8 }} className='flex justify-center mt-10 mb-10'>
+          viewport={{ once: true, amount: 0.3 }} className='flex justify-center mt-10 mb-10'>
           <Link href='/download'>
-            <button className='flex items-center bg-[#FE1940] px-7 py-2.5 text-white rounded-3xl gap-4'>
+            <button className='flex items-center bg-[#FE1940] px-7 py-2.5 text-white rounded-3xl gap-4 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95'>
               Download
               <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 16H13C13.5523 16 14 16.4477 14 17C14 17.5063 13.6238 17.9247 13.1357 17.9909L13 18H1C0.447715 18 0 17.5523 0 17C0 16.4937 0.376205 16.0753 0.864306 16.0091L1 16ZM6.86431 0.00912889L7 0C7.50626 0 7.92465 0.376205 7.99087 0.864306L8 1V11.2507L11.0069 8.24551C11.362 7.89049 11.9175 7.85822 12.309 8.14869L12.4212 8.24551C12.7762 8.60054 12.8084 9.15609 12.518 9.54757L12.4212 9.65973L7.70711 14.3738C7.35208 14.7288 6.79653 14.7611 6.40505 14.4706L6.29289 14.3738L1.57885 9.65973C1.18832 9.2692 1.18832 8.63604 1.57885 8.24551C1.93387 7.89049 2.48942 7.85822 2.8809 8.14869L2.99306 8.24551L6 11.2533V1C6 0.493739 6.37621 0.0753454 6.86431 0.00912889Z" fill="white" />
