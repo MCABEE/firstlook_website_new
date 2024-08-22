@@ -1,7 +1,35 @@
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const antonia = localFont({
+  src: [
+    {
+      path: './AntoniaH2-Regular.woff2',
+      weight: '100',
+      style: 'regular',
+    },
+    {
+      path: './AntoniaH2-Light.woff2',
+      weight: '100',
+      style: 'light',
+    },
+    {
+      path: './AntoniaH2-Medium.woff2',
+      weight: '300',
+      style: 'medium',
+    },
+    {
+      path: './AntoniaH2-SemiBold.woff2',
+      weight: '400',
+      style: 'semibold',
+    },
+    {
+      path: './AntoniaH2-Bold.woff2',
+      weight: '700',
+      style: 'bold',
+    },
+  ],
+})
 
 export const metadata = {
   title: "Firstlook: Connecting Singles Globally",
@@ -13,10 +41,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="stylesheet" href="https://fonts.adobe.com/fonts/antonia-variable#fonts-section" />
-      </head>
-      <body className={inter.className}>
+      <body className={antonia.className}>
         {children}
       </body>
     </html>

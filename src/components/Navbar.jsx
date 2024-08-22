@@ -60,12 +60,12 @@ const Navbar = ({ fontcolor }) => {
                         <Image className='h-[40px] w-[28px] cursor-pointer transform transition-transform duration-100 ease-in-out hover:scale-110' src={logo} alt="logo" />
                     </Link>
                     <div className='flex justify-end'>
-                        <div className={`flex justify-center text-lg text-${fColor} font-regular items-center w-full gap-10 mx-10`}>
+                        <div className={`flex justify-center text-lg text-${fColor} items-center w-full gap-10 mx-10`}>
                             {filteredLinks.map((link, index) => (
                                 <Link
                                     key={link.href}
                                     href={link.href}
-                                    className='cursor-pointer transform transition-transform duration-100 ease-in-out hover:scale-110'
+                                    className='cursor-pointer font-light transform transition-transform duration-100 ease-in-out hover:scale-110'
                                 >
                                     <motion.p
                                         initial={{ y: "3vw", opacity: 0 }}

@@ -61,12 +61,12 @@ export default function Home() {
             <div className="max-w-xl text-left mt-72 sm:mt-48">
               <motion.h1 initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.15 } }}
-                viewport={{ once: true, amount: 0.3 }} className="text-3xl text-white font-semibold sm:text-5xl">
+                viewport={{ once: true, amount: 0.3 }} className="text-3xl text-white font-light sm:text-5xl">
                 Making Connections
               </motion.h1>
               <motion.h1 initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.2 } }}
-                viewport={{ once: true, amount: 0.3 }} className="text-3xl text-white font-semibold sm:text-5xl sm:mt-3">
+                viewport={{ once: true, amount: 0.3 }} className="text-3xl text-white font-light sm:text-5xl sm:mt-3">
                 Effortless
               </motion.h1>
 
