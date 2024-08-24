@@ -115,7 +115,7 @@ const HelpCenter = () => {
                                     </div>
                                 ))
                             ) : (
-                                <p className="text-center text-gray-500 text-[12px] sm:text-[21px] mt-5">No results found for "{search}"</p>
+                                <p className="text-center text-gray-500 text-[12px] sm:text-[21px] mt-5">No results found for &quot;{search}&quot;</p>
                             )}
                         </div>
                     </motion.div>
