@@ -1,7 +1,4 @@
-import Image from 'next/image'
 import React from 'react'
-import logo2 from '../../public/asset/logo_2.png'
-import Link from 'next/link'
 
 const Footer = () => {
     return (
@@ -10,7 +7,7 @@ const Footer = () => {
                 <div className="w-full mt-20 flex items-center justify-center">
                     <div className="md:w-[80%] w-full px-4 text-white flex flex-col">
                         <div className="flex flex-col">
-                            <div className="flex mb-8 flex-row">
+                            <div className="flex mb-8 flex-row items-center justify-between">
                                 <div>
                                     <svg width="174" height="33" viewBox="0 0 174 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M5.22852 32H0.760742V10.584H13.0361V14.3047H5.22852V19.8271H12.4941V23.5332H5.22852V32ZM17.2256 32V10.584H21.7666V32H17.2256ZM31.6982 20.0908H33.1631C34.5986 20.0908 35.6582 19.8516 36.3418 19.373C37.0254 18.8945 37.3672 18.1426 37.3672 17.1172C37.3672 16.1016 37.0156 15.3789 36.3125 14.9492C35.6191 14.5195 34.54 14.3047 33.0752 14.3047H31.6982V20.0908ZM31.6982 23.7822V32H27.1572V10.584H33.3975C36.3076 10.584 38.4609 11.1162 39.8574 12.1807C41.2539 13.2354 41.9521 14.8418 41.9521 17C41.9521 18.2598 41.6055 19.3828 40.9121 20.3691C40.2188 21.3457 39.2373 22.1123 37.9678 22.6689C41.1904 27.4834 43.29 30.5938 44.2666 32H39.2275L34.1152 23.7822H31.6982ZM59.6035 26.0527C59.6035 27.9863 58.9053 29.5098 57.5088 30.623C56.1221 31.7363 54.1885 32.293 51.708 32.293C49.4229 32.293 47.4014 31.8633 45.6436 31.0039V26.7852C47.0889 27.4297 48.3096 27.8838 49.3057 28.1475C50.3115 28.4111 51.2295 28.543 52.0596 28.543C53.0557 28.543 53.8174 28.3525 54.3447 27.9717C54.8818 27.5908 55.1504 27.0244 55.1504 26.2725C55.1504 25.8525 55.0332 25.4814 54.7988 25.1592C54.5645 24.8271 54.2178 24.5098 53.7588 24.207C53.3096 23.9043 52.3867 23.4209 50.9902 22.7568C49.6816 22.1416 48.7002 21.5508 48.0459 20.9844C47.3916 20.418 46.8691 19.7588 46.4785 19.0068C46.0879 18.2549 45.8926 17.376 45.8926 16.3701C45.8926 14.4756 46.5322 12.9863 47.8115 11.9023C49.1006 10.8184 50.8779 10.2764 53.1436 10.2764C54.2568 10.2764 55.3164 10.4082 56.3223 10.6719C57.3379 10.9355 58.3975 11.3066 59.501 11.7852L58.0361 15.3154C56.8936 14.8467 55.9463 14.5195 55.1943 14.334C54.4521 14.1484 53.7197 14.0557 52.9971 14.0557C52.1377 14.0557 51.4785 14.2559 51.0195 14.6562C50.5605 15.0566 50.3311 15.5791 50.3311 16.2236C50.3311 16.624 50.4238 16.9756 50.6094 17.2783C50.7949 17.5713 51.0879 17.8594 51.4883 18.1426C51.8984 18.416 52.8604 18.9141 54.374 19.6367C56.376 20.5938 57.748 21.5557 58.4902 22.5225C59.2324 23.4795 59.6035 24.6562 59.6035 26.0527ZM71.7471 32H67.2061V14.3633H61.3906V10.584H77.5625V14.3633H71.7471V32Z" fill="#FE1940" />
@@ -20,12 +17,6 @@ const Footer = () => {
                                 </div>
                                 <div className="flex justify-center items-end w-full space-x-12">
                                     <p className='text-black font-bold mt-4 '>© 2024 BY FIRSTLOOK Networks</p>
-
-                                    {/* <Link href='/membershippolicy' className="hidden md:block cursor-pointer text-gray-600">T&C, Policy</Link>
-                                    <Link href='/helpcenter' className="hidden md:block cursor-pointer text-gray-600"> Help Center</Link>
-                                    <Link href='/pageunderconstruction' className="hidden md:block cursor-pointer text-gray-600">Press</Link>
-                                    <Link href='/pageunderconstruction' className="hidden md:block cursor-pointer text-gray-600">Company</Link>
-                                    <Link href='/contact' className="hidden md:block cursor-pointer text-gray-600">Contact</Link> */}
                                 </div>
                                 <div className="flex flex-row space-x-8 items-end justify-end">
                                     <a className='transform transition-transform duration-100 ease-in-out hover:scale-110 active:scale-95' href='https://www.facebook.com/firstlookappofficial?mibextid=ZbWKwL'>
@@ -50,33 +41,6 @@ const Footer = () => {
                                     </a>
                                 </div>
                             </div>
-                            {/* <hr className="border-gray-300" /> */}
-                            {/* <div className="flex mb-4 flex-row mt-8">
-                                <div className="flex space-x-1 items-center text-xl text-black">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10 19C5.032 19 1 14.968 1 10C1 5.032 5.032 1 10 1C14.968 1 19 5.032 19 10C19 14.968 14.968 19 10 19Z" stroke="#292D32" strokeLinecap="round" strokeLinejoin="round" />
-                                        <path d="M12.5912 12.7004C11.9522 13.2584 11.1242 13.6004 10.2152 13.6004C8.22624 13.6004 6.61523 11.9894 6.61523 10.0004C6.61523 8.01139 8.22624 6.40039 10.2152 6.40039C11.1242 6.40039 11.9522 6.74239 12.5912 7.30039" stroke="#292D32" strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg>
-                                    <p className="font-bold">MCABEE</p>
-                                    <p>Digital</p>
-                                </div>
-                                <div className="flex justify-center items-center w-full">
-                                    <Image src={logo2} className="h-8 w-6" alt="logo"></Image>
-                                </div>
-                                <div className="flex flex-row items-center justify-end">
-                                    <div className="flex items-center bg-white rounded-3xl border border-[#444444] text-black space-x-8 px-6 py-2">
-                                        <p>
-                                            English
-                                        </p>
-                                        <div className="">
-                                            <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 5.72347L6.2765 11L11.553 5.72347" stroke="#292D32" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
-                                                <path d="M6.27734 1.0007V10.8525" stroke="#292D32" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> */}
                         </div>
                     </div>
                 </div>
@@ -114,38 +78,7 @@ const Footer = () => {
                     </div>
                     <div className="w-full flex justify-center flex-col items-center space-y-5">
                         <p className='text-black text-xl text-center font-thin'>© 2024 Firstlook Networks<br />All rights reserved</p>
-
-                        {/* <Link href='/membershippolicy' className="cursor-pointer text-black">Terms & Policy</Link>
-                        <Link href='/helpcenter' className="cursor-pointer text-black"> Help Center</Link>
-                        <Link href='/pageunderconstruction' className="cursor-pointer text-black">Press</Link>
-                        <Link href='/pageunderconstruction' className="cursor-pointer text-black">Company</Link>
-                        <Link href='/contact' className="cursor-pointer text-black">Contact</Link> */}
                     </div>
-                    {/* <div className="flex space-x-2 items-center text-base text-black">
-                        <p>
-                            2024
-                        </p>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 19C5.032 19 1 14.968 1 10C1 5.032 5.032 1 10 1C14.968 1 19 5.032 19 10C19 14.968 14.968 19 10 19Z" stroke="#292D32" strokeLinecap="round" strokeLinejoin="round" />
-                            <path d="M12.5912 12.7004C11.9522 13.2584 11.1242 13.6004 10.2152 13.6004C8.22624 13.6004 6.61523 11.9894 6.61523 10.0004C6.61523 8.01139 8.22624 6.40039 10.2152 6.40039C11.1242 6.40039 11.9522 6.74239 12.5912 7.30039" stroke="#292D32" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                        <p className="font-bold">MCABEE</p>
-                        <p>Digital</p>
-                        <Image src={logo2} className="h-5 w-3" alt="logo"></Image>
-                    </div> */}
-                    {/* <div className="flex">
-                        <div className="flex items-center bg-white rounded-3xl border border-[#444444] text-black space-x-9 px-6 py-2">
-                            <p>
-                                English
-                            </p>
-                            <div className="">
-                                <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 5.72347L6.2765 11L11.553 5.72347" stroke="#292D32" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path d="M6.27734 1.0007V10.8525" stroke="#292D32" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </div>
-                        </div>
-                    </div> */}
                 </div>
             </div>
         </>

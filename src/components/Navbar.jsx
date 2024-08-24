@@ -54,12 +54,12 @@ const Navbar = ({ fontcolor }) => {
         <nav
             className={`fixed top-0 w-full z-10 transition-transform duration-300 ${scrollDirection === 'down' ? '-translate-y-full' : 'translate-y-0'} bg-${bgColor}`}
         >
-            <div className='md:block hidden m-5'>
-                <div className='px-14 flex justify-between'>
+            <div className='lg:block hidden m-8 mx-20'>
+                <div className='px-14 flex justify-between '>
                     <Link href='/'>
-                        <Image className='h-[40px] w-[28px] cursor-pointer transform transition-transform duration-100 ease-in-out hover:scale-110' src={logo} alt="logo" />
+                        <Image className='cursor-pointer transform transition-transform duration-100 ease-in-out hover:scale-110' src={logo} alt="logo" />
                     </Link>
-                    <div className='flex justify-end'>
+                    <div className='flex justify-end '>
                         <div className={`flex justify-center text-xl text-${fColor} items-center w-full gap-10 mx-10`}>
                             {filteredLinks.map((link, index) => (
                                 <Link
@@ -94,7 +94,7 @@ const Navbar = ({ fontcolor }) => {
             </div>
 
             {isOpen ?
-                <div className='md:hidden block bg-white'>
+                <div className='lg:hidden block bg-white'>
                     <div className={`h-screen transition-all duration-500 ease-out ${isOpen ? "right-0" : "-right-[120vw]"}`}>
                         <div className='flex w-screen justify-between items-end p-4'>
                             <div className='flex justify-center '>
@@ -138,7 +138,7 @@ const Navbar = ({ fontcolor }) => {
                     </div>
                 </div>
                 :
-                <div className='md:hidden block mt-0'>
+                <div className='lg:hidden block mt-0'>
                     <div className='w-screen p-5 flex'>
                         <Link href={"/"}>
                             <Image className='h-[30px] w-[24px] cursor-pointer transform transition-transform duration-100 ease-in-out hover:scale-110' width={100} src={logo} alt="logo" />

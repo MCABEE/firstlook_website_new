@@ -42,7 +42,7 @@ export const faq = [
     },
     {
         id: 9,
-        qns: "HWhat privacy settings are available?",
+        qns: "What privacy settings are available?",
         ans: "You can avoid profiles you are not interested in by using the 'Not Interested'; feature. Once activated, these profiles will no longer be able to view your profile or posts. You have control over who can view your photos and will receive a list of users who have viewed your profile. Additionally, you can block a user if necessary, preventing any future connection attempts. If needed, you can also report a user with a valid reason."
     },
     {
