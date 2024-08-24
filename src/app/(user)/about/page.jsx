@@ -39,7 +39,7 @@ const TeamMember = ({ name, role, description, imageClass }) => (
                 </p>
                 <div className="flex flex-col lg:flex-row items-center md:items-start mt-5">
                     <a href="https://www.linkedin.com/in/shibinsebastian1986/" target="_blank" rel="noopener noreferrer">
-                        <Image src={linkedin} className="self-center lg:self-start" />
+                        <Image src={linkedin} className="self-center lg:self-start" alt="Linkedin" />
                     </a>
                 </div>
             </div>
