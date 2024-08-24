@@ -8,7 +8,7 @@ const Footer = () => {
         <>
             <div className="lg:block hidden">
                 <div className="w-full mt-20 flex items-center justify-center">
-                    <div className="md:w-[95%] xl:w-[1150px] w-full px-4 text-white flex flex-col">
+                    <div className="md:w-[80%] w-full px-4 text-white flex flex-col">
                         <div className="flex flex-col">
                             <div className="flex mb-8 flex-row">
                                 <div>
@@ -19,7 +19,7 @@ const Footer = () => {
                                     </svg>
                                 </div>
                                 <div className="flex justify-center items-end w-full space-x-12">
-                                    <p className='text-black font-thin'>© 2024 Firstlook Networks. All rights reserved</p>
+                                    <p className='text-black font-bold mt-4 '>© 2024 BY FIRSTLOOK Networks</p>
 
                                     {/* <Link href='/membershippolicy' className="hidden md:block cursor-pointer text-gray-600">T&C, Policy</Link>
                                     <Link href='/helpcenter' className="hidden md:block cursor-pointer text-gray-600"> Help Center</Link>

@@ -8,11 +8,11 @@ const antonia = localFont({
       weight: '100',
       style: 'light',
     },
-    {
-      path: './AntoniaH2-Regular.woff2',
-      weight: '200',
-      style: 'regular',
-    },
+    // {
+    //   path: './AntoniaH2-Regular.woff2',
+    //   weight: '100',
+    //   style: 'regular',
+    // },
     // {
     //   path: './AntoniaH2-Medium.woff2',
     //   weight: '300',

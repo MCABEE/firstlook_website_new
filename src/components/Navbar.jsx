@@ -65,7 +65,7 @@ const Navbar = ({ fontcolor }) => {
                                 <Link
                                     key={link.href}
                                     href={link.href}
-                                    className='cursor-pointer font-light transform transition-transform duration-100 ease-in-out hover:scale-110'
+                                    className='cursor-pointer font-semibold transform transition-transform duration-100 ease-in-out hover:scale-110'
                                 >
                                     <motion.p
                                         initial={{ y: "3vw", opacity: 0 }}
