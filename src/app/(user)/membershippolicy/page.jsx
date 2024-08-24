@@ -4,15 +4,18 @@ import CircleIcon from '@mui/icons-material/Circle';
 import Link from 'next/link';
 import { motion } from "framer-motion"
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 const MembershipPolicy = () => {
     const [list, setList] = useState(false)
     return (
         <>
             <Navbar fontcolor='black' />
-            <div className='font-sans mt-20 md:mt-24 mb-10'>
-                <div className="flex justify-center items-center">
-                    <section className="bg-white px-7 py-12 sm:px-16 sm:py-16 md:px-20 md:py-16 xl:px-28 xl:py-16 h-fit rounded-3xl w-[95%] xl:w-[1150px]">
+            <div className=' mt-20 md:mt-28 mb-10'>
+                <div className="flex justify-center items-center mt-28">
+                    <motion.section initial={{ y: "10vw", opacity: 0 }}
+                        whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.3 } }}
+                        viewport={{ once: true, amount: 0.0 }} className="bg-white mt-10 px-7 py-12 sm:px-16 sm:py-16 md:px-20 md:py-16 xl:px-28 xl:py-16 h-fit rounded-3xl w-[95%] xl:w-[1150px]">
                         <div className='lg:block hidden'>
                             <div className='flex md:space-x-6 lg:space-x-12 xl:space-x-16 text-[21px] font-light'>
                                 <Link href='/membershippolicy' className='font-semibold border-b-2 border-[#FC3657] cursor-pointer'>
@@ -31,7 +34,7 @@ const MembershipPolicy = () => {
                         </div>
 
                         <div className='lg:hidden block'>
-                            <div onClick={() => list ? setList(false) : setList(true)} className='flex space-x-2 text-[#444444]'>
+                            <div onClick={() => list ? setList(false) : setList(true)} className='flex space-x-2'>
                                 <p className='font-semibold border-b sm:text-[21px] border-black'>
                                     Membership Policy
                                 </p>
@@ -86,7 +89,7 @@ const MembershipPolicy = () => {
 
                         <motion.div initial={{ y: "10vw", opacity: 0 }}
                             whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.3 } }}
-                            viewport={{ once: true, amount: 0.1 }} className='text-[#444444]'>
+                            viewport={{ once: true, amount: 0.1 }} className=''>
                             <p className={list ? 'mt-8 sm:text-[21px] font-light' : 'mt-10 sm:mt-10 lg:mt-16 sm:text-[21px] font-light'}>
                                 Effective from: 2024 April 1
                             </p>
@@ -249,7 +252,7 @@ const MembershipPolicy = () => {
                                 <path d="M49.0645 14V1.15039H50.5586V12.6641H56.2627V14H49.0645ZM69.6133 7.55762C69.6133 8.54785 69.4873 9.4502 69.2354 10.2646C68.9834 11.0732 68.6084 11.7705 68.1104 12.3564C67.6182 12.9365 67.0059 13.3848 66.2734 13.7012C65.541 14.0176 64.6914 14.1758 63.7246 14.1758C62.7285 14.1758 61.8584 14.0176 61.1143 13.7012C60.376 13.3848 59.7607 12.9336 59.2686 12.3477C58.7822 11.7617 58.416 11.0615 58.1699 10.2471C57.9297 9.43262 57.8096 8.53027 57.8096 7.54004C57.8096 6.22754 58.0264 5.07617 58.46 4.08594C58.8936 3.0957 59.5498 2.3252 60.4287 1.77441C61.3135 1.22363 62.4209 0.948242 63.751 0.948242C65.0225 0.948242 66.0918 1.2207 66.959 1.76562C67.832 2.31055 68.4912 3.07812 68.9365 4.06836C69.3877 5.05273 69.6133 6.21582 69.6133 7.55762ZM59.3828 7.55762C59.3828 8.64746 59.5381 9.59082 59.8486 10.3877C60.1592 11.1846 60.6338 11.7998 61.2725 12.2334C61.917 12.667 62.7344 12.8838 63.7246 12.8838C64.7207 12.8838 65.5352 12.667 66.168 12.2334C66.8066 11.7998 67.2783 11.1846 67.583 10.3877C67.8877 9.59082 68.04 8.64746 68.04 7.55762C68.04 5.89941 67.6914 4.60449 66.9941 3.67285C66.3027 2.73535 65.2217 2.2666 63.751 2.2666C62.7549 2.2666 61.9346 2.48047 61.29 2.9082C60.6455 3.33594 60.165 3.94531 59.8486 4.73633C59.5381 5.52148 59.3828 6.46191 59.3828 7.55762ZM83.623 7.55762C83.623 8.54785 83.4971 9.4502 83.2451 10.2646C82.9932 11.0732 82.6182 11.7705 82.1201 12.3564C81.6279 12.9365 81.0156 13.3848 80.2832 13.7012C79.5508 14.0176 78.7012 14.1758 77.7344 14.1758C76.7383 14.1758 75.8682 14.0176 75.124 13.7012C74.3857 13.3848 73.7705 12.9336 73.2783 12.3477C72.792 11.7617 72.4258 11.0615 72.1797 10.2471C71.9395 9.43262 71.8193 8.53027 71.8193 7.54004C71.8193 6.22754 72.0361 5.07617 72.4697 4.08594C72.9033 3.0957 73.5596 2.3252 74.4385 1.77441C75.3232 1.22363 76.4307 0.948242 77.7607 0.948242C79.0322 0.948242 80.1016 1.2207 80.9688 1.76562C81.8418 2.31055 82.501 3.07812 82.9463 4.06836C83.3975 5.05273 83.623 6.21582 83.623 7.55762ZM73.3926 7.55762C73.3926 8.64746 73.5479 9.59082 73.8584 10.3877C74.1689 11.1846 74.6436 11.7998 75.2822 12.2334C75.9268 12.667 76.7441 12.8838 77.7344 12.8838C78.7305 12.8838 79.5449 12.667 80.1777 12.2334C80.8164 11.7998 81.2881 11.1846 81.5928 10.3877C81.8975 9.59082 82.0498 8.64746 82.0498 7.55762C82.0498 5.89941 81.7012 4.60449 81.0039 3.67285C80.3125 2.73535 79.2314 2.2666 77.7607 2.2666C76.7646 2.2666 75.9443 2.48047 75.2998 2.9082C74.6553 3.33594 74.1748 3.94531 73.8584 4.73633C73.5479 5.52148 73.3926 6.46191 73.3926 7.55762ZM95.752 14H93.9854L89.3535 7.75098L87.9824 8.98145V14H86.4883V1.15039H87.9824V7.55762C88.3164 7.17676 88.6592 6.79883 89.0107 6.42383C89.3623 6.04297 89.7109 5.65918 90.0566 5.27246L93.8096 1.15039H95.5586L90.4434 6.72266L95.752 14Z" fill="black" />
                             </svg>
                         </div>
-                        <div className='sm:block hidden'>
+                        {/* <div className='sm:block hidden'>
                             <div className="flex flex-row space-x-4 mt-8">
                                 <a href='https://www.facebook.com/firstlookappofficial?mibextid=ZbWKwL'>
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -272,8 +275,8 @@ const MembershipPolicy = () => {
                                     </svg>
                                 </a>
                             </div>
-                        </div>
-                        <div className='sm:hidden block'>
+                        </div> */}
+                        {/* <div className='sm:hidden block'>
                             <div className="flex flex-row space-x-4 mt-5">
                                 <a href='https://www.facebook.com/firstlookappofficial?mibextid=ZbWKwL'>
                                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -296,10 +299,11 @@ const MembershipPolicy = () => {
                                     </svg>
                                 </a>
                             </div>
-                        </div>
-                    </section>
+                        </div> */}
+                    </motion.section>
                 </div>
             </div >
+            <Footer />
         </>
     )
 }
