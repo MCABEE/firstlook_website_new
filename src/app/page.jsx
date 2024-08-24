@@ -14,7 +14,7 @@ import Navbar from "@/components/Navbar";
 
 export default function Home() {
   const [showDownloadButton, setShowDownloadButton] = useState(false);
-  const [loading, setLoading] = useState(true); // State for preloader
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,10 +28,8 @@ export default function Home() {
       }
     };
 
-    // Attach the scroll event listener
     window.addEventListener('scroll', handleScroll);
 
-    // Clean up the event listener
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -45,7 +43,7 @@ export default function Home() {
   }, []);
 
   if (loading) {
-    return <Preloader />; // Show preloader while loading
+    return <Preloader />; 
   }
   return (
     <div className=''>
@@ -57,31 +55,31 @@ export default function Home() {
           whileInView={{ y: 0, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.15 } }}
           viewport={{ once: true, amount: 0.1 }}
         >
-          <div className="relative mx-auto max-w-screen-xl px-6 sm:px-20 py-28 lg:py-36 lg:flex lg:items-center lg:px-16">
-            <div className="max-w-xl text-left mt-72 sm:mt-48">
+          <div className="absolute inset-0 mx-auto max-w-screen-xl px-6 sm:px-20 py-28 lg:py-36 lg:flex lg:items-center lg:px-6">
+            <div className="max-w-4xl text-left mt-20">
               <motion.h1 initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.15 } }}
-                viewport={{ once: true, amount: 0.3 }} className="text-3xl text-white font-light sm:text-5xl">
+                viewport={{ once: true, amount: 0.3 }} className="text-xl text-white font-extrabold sm:text-7xl mt-28">
                 Making Connections
               </motion.h1>
               <motion.h1 initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.2 } }}
-                viewport={{ once: true, amount: 0.3 }} className="text-3xl text-white font-light sm:text-5xl sm:mt-3">
+                viewport={{ once: true, amount: 0.3 }} className="text-xl text-white font-bold sm:text-7xl sm:mt-3">
                 Effortless
               </motion.h1>
 
               <motion.p initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.25 } }}
-                viewport={{ once: true, amount: 0.3 }} className="mt-3 max-w-lg text-sm md:text-base lg:text-lg font-light text-white">
+                viewport={{ once: true, amount: 0.3 }} className="mt-12 max-w-4xl text-sm md:text-base lg:text-3xl font-normal text-white">
                 Connecting singles worldwide, effortlessly. <br />
                 your reliable platform for matchmaking !
               </motion.p>
 
               <motion.div initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.3 } }}
-                viewport={{ once: true, amount: 0.3 }} className="mt-5 flex flex-wrap gap-4 text-center">
+                viewport={{ once: true, amount: 0.3 }} className="mt-10 flex flex-wrap gap-4 text-center">
                 <Link href='/download'>
-                  <button className='flex items-center bg-[#FE1940] sm:px-7 px-6 py-2 text-sm sm:text-base text-white rounded-3xl gap-4 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95'>
+                  <button className='flex items-center bg-[#FE1940] md:px-12 md:py-3 px-6 py-2 text-sm sm:text-2xl text-white rounded-3xl gap-4 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95'>
                     Download
                     <div className="sm:hidden block">
                       <svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
