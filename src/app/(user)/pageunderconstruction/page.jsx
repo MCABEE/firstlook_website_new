@@ -19,10 +19,10 @@ const PageUnderConstruction = () => {
                     <section className="flex justify-start items-start px-20 pt-20 pb-52 lg:ps-52 mt-8 text-3xl font-light w-full bg-white rounded-3xl max-md:px-5 max-md:pb-24 max-md:max-w-2xl">
                         <div className="flex flex-col items-start mb-0 max-w-full w-[755px] max-md:mb-2.5">
                             <h1 className="text-6xl font-semibold leading-[65px] max-md:text-4xl max-md:leading-[53px]">
-                                We're enhancing <br /> this page
+                                We&apos;re enhancing <br /> this page
                             </h1>
                             <p className="mt-3 sm:mt-6 sm:text-2xl max-w-xs sm:max-w-2xl">
-                                to bring you an even better experience. It'll be ready soon! <br /> In the meantime, stay connected with us on{" "}
+                                to bring you an even better experience. It&apos;ll be ready soon! <br /> In the meantime, stay connected with us on{" "}
                                 <span className="font-bold">our social handles</span> <br />for the latest updates
                             </p>
                             <div className="flex flex-wrap gap-9 mt-16">
