@@ -24,7 +24,7 @@ const Footer = () => {
                                     </svg>
                                 </div>
                                 <div className="flex justify-center items-end w-full space-x-12">
-                                    <p className='text-black font-bold mt-4 '>© 2024 BY FIRSTLOOK Networks</p>
+                                    <p className='text-black font-light mt-4 '>© 2024 BY FIRSTLOOK Networks</p>
                                 </div>
                                 <div className="flex flex-row space-x-8 items-end justify-end">
                                     <a className='transform transition-transform duration-100 ease-in-out hover:scale-110 active:scale-95' href='https://www.facebook.com/firstlookappofficial?mibextid=ZbWKwL'>
