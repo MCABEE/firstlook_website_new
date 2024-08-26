@@ -15,7 +15,7 @@ const PageUnderConstruction = () => {
             <motion.div initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.3 } }}
                 viewport={{ once: true, amount: 0.1 }} className="flex justify-center items-center mt-28">
-                <section className="w-[95%] xl:w-[1150px] bg-white rounded-3xl mt-10">
+                <section className="w-[95%] bg-white rounded-3xl mt-10">
                     <section className="flex justify-start items-start px-20 pt-20 pb-52 lg:ps-52 mt-8 text-3xl font-light w-full bg-white rounded-3xl max-md:px-5 max-md:pb-24 max-md:max-w-2xl">
                         <div className="flex flex-col items-start mb-0 max-w-full w-[755px] max-md:mb-2.5">
                             <h1 className="text-6xl font-semibold leading-[65px] max-md:text-4xl max-md:leading-[53px]">

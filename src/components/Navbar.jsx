@@ -20,7 +20,7 @@ const Navbar = ({ fontcolor }) => {
             const windowHeight = window.innerHeight;
             const scrollPercent = (scrollPosition / windowHeight) * 100;
 
-            if (scrollPercent > 10) {
+            if (scrollPercent > 50) {
                 setBgColor('white');
                 setFColor('black');
             } else {
@@ -52,45 +52,46 @@ const Navbar = ({ fontcolor }) => {
 
     return (
         <nav
-            className={`fixed top-0 w-full z-10 transition-transform duration-300 ${scrollDirection === 'down' ? '-translate-y-full' : 'translate-y-0'} bg-${bgColor}`}
+            className={`fixed top-0 w-full z-10 transform transition-transform duration-700 ease-in-out ${scrollDirection === 'down' ? '-translate-y-full bg-transparent' : `translate-y-0 bg-${bgColor}`}`}
         >
             <div className='lg:block hidden m-8 mx-20'>
-                <div className='px-14 flex justify-between '>
-                    <Link href='/'>
-                        <Image className='cursor-pointer transform transition-transform duration-100 ease-in-out hover:scale-110' src={logo} alt="logo" />
-                    </Link>
-                    <div className='flex justify-end '>
-                        <div className={`flex justify-center text-xl text-${fColor} items-center w-full gap-10 mx-10`}>
-                            {filteredLinks.map((link, index) => (
-                                <Link
-                                    key={link.href}
-                                    href={link.href}
-                                    className='cursor-pointer font-semibold transform transition-transform duration-100 ease-in-out hover:scale-110'
-                                >
-                                    <motion.p
-                                        initial={{ y: "3vw", opacity: 0 }}
-                                        whileInView={{
-                                            y: 0,
-                                            opacity: 1,
-                                            transition: { type: "spring", stiffness: 50, delay: 0.25 + index * 0.1 }
-                                        }}
-                                        viewport={{ once: true, amount: 0.8 }}
-                                    >
-                                        {link.label}
-                                    </motion.p>
-                                </Link>
-                            ))}
-                        </div>
-                        <Link href='/download'>
-                            <button className='flex items-center font-semibold bg-[#FE1940] px-8 py-3 text-lg text-white rounded-3xl gap-4 cursor-pointer transform transition-transform duration-100 ease-in-out hover:scale-105'>
-                                Download
-                                <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 16H13C13.5523 16 14 16.4477 14 17C14 17.5063 13.6238 17.9247 13.1357 17.9909L13 18H1C0.447715 18 0 17.5523 0 17C0 16.4937 0.376205 16.0753 0.864306 16.0091L1 16ZM6.86431 0.00912889L7 0C7.50626 0 7.92465 0.376205 7.99087 0.864306L8 1V11.2507L11.0069 8.24551C11.362 7.89049 11.9175 7.85822 12.309 8.14869L12.4212 8.24551C12.7762 8.60054 12.8084 9.15609 12.518 9.54757L12.4212 9.65973L7.70711 14.3738C7.35208 14.7288 6.79653 14.7611 6.40505 14.4706L6.29289 14.3738L1.57885 9.65973C1.18832 9.2692 1.18832 8.63604 1.57885 8.24551C1.93387 7.89049 2.48942 7.85822 2.8809 8.14869L2.99306 8.24551L6 11.2533V1C6 0.493739 6.37621 0.0753454 6.86431 0.00912889Z" fill="white" />
-                                </svg>
-                            </button>
-                        </Link>
-                    </div>
-                </div>
+            <div className='px-14 flex justify-between items-center'>
+    <Link href='/'>
+        <Image className='cursor-pointer transform transition-transform duration-100 ease-in-out hover:scale-110' src={logo} alt="logo" />
+    </Link>
+    <div className='flex items-center'>
+        <div className={`flex text-xl text-${fColor} items-center gap-10 mx-10`}>
+            {filteredLinks.map((link, index) => (
+                <Link
+                    key={link.href}
+                    href={link.href}
+                    className='cursor-pointer font-light transform transition-transform duration-100 ease-in-out hover:scale-110'
+                >
+                    <motion.p
+                        initial={{ y: "3vw", opacity: 0 }}
+                        whileInView={{
+                            y: 0,
+                            opacity: 1,
+                            transition: { type: "spring", stiffness: 50, delay: 0.25 + index * 0.1 }
+                        }}
+                        viewport={{ once: true, amount: 0.8 }}
+                    >
+                        {link.label}
+                    </motion.p>
+                </Link>
+            ))}
+        </div>
+        <Link href='/download'>
+            <button className='flex items-center font-light bg-[#FE1940] px-8 py-3 text-lg text-white rounded-3xl gap-4 cursor-pointer transform transition-transform duration-100 ease-in-out hover:scale-105'>
+                Download
+                <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 16H13C13.5523 16 14 16.4477 14 17C14 17.5063 13.6238 17.9247 13.1357 17.9909L13 18H1C0.447715 18 0 17.5523 0 17C0 16.4937 0.376205 16.0753 0.864306 16.0091L1 16ZM6.86431 0.00912889L7 0C7.50626 0 7.92465 0.376205 7.99087 0.864306L8 1V11.2507L11.0069 8.24551C11.362 7.89049 11.9175 7.85822 12.309 8.14869L12.4212 8.24551C12.7762 8.60054 12.8084 9.15609 12.518 9.54757L12.4212 9.65973L7.70711 14.3738C7.35208 14.7288 6.79653 14.7611 6.40505 14.4706L6.29289 14.3738L1.57885 9.65973C1.18832 9.2692 1.18832 8.63604 1.57885 8.24551C1.93387 7.89049 2.48942 7.85822 2.8809 8.14869L2.99306 8.24551L6 11.2533V1C6 0.493739 6.37621 0.0753454 6.86431 0.00912889Z" fill="white" />
+                </svg>
+            </button>
+        </Link>
+    </div>
+</div>
+
             </div>
 
             {isOpen ?
