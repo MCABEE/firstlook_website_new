@@ -66,8 +66,8 @@ export default function Home() {
           whileInView={{
             y: 0,
             opacity: 1,
-            backgroundPosition: "50% 0%",
-            transition: { type: "spring", stiffness: 50, delay: 0.5 }
+            backgroundPosition: "500% 0%",
+            transition: { type: "spring", stiffness: 30, delay: 1.2 }
           }}
           viewport={{ once: true, amount: 0.1 }}
         >
@@ -75,7 +75,7 @@ export default function Home() {
             <div className="max-w-4xl text-left mt-24">
               <motion.h1
                 initial={{ y: "10vw", opacity: 0 }}
-                whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.15 } }}
+                whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.3 } }}
                 viewport={{ once: true, amount: 0.3 }}
                 className="text-xl text-white font-semibold md:text-6xl mt-28"
               >
@@ -83,7 +83,7 @@ export default function Home() {
               </motion.h1>
               <motion.h1
                 initial={{ y: "10vw", opacity: 0 }}
-                whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.2 } }}
+                whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.3 } }}
                 viewport={{ once: true, amount: 0.3 }}
                 className="text-xl text-white font-bold md:text-6xl mt-3"
               >
@@ -92,7 +92,7 @@ export default function Home() {
 
               <motion.p
                 initial={{ y: "10vw", opacity: 0 }}
-                whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.25 } }}
+                whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.3 } }}
                 viewport={{ once: true, amount: 0.3 }}
                 className="mt-12 max-w-4xl text-sm md:text-3xl font-regular text-white"
               >
