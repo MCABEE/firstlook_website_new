@@ -171,15 +171,22 @@ const About = () => {
                             viewport={{ once: true, amount: 0.2 }} className="mt-16 text-[28px] sm:text-5xl text-center  max-md:mt-10 max-md:max-w-full">
                             Love working with us? Join our team!
                         </motion.p>
-                        <Link href="https://mcabee.in/" legacyBehavior>
-                            <motion.a initial={{ y: "10vw", opacity: 0 }}
-                                whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.5 } }}
-                                viewport={{ once: true, amount: 0.2 }} target="_blank" rel="noopener noreferrer">
-                                <button className="px-16 py-4 mt-11 max-w-full text-xl font-semibold text-center text-white whitespace-nowrap bg-[#FE1940] rounded-[40px] w-[200px] max-md:px-5 max-md:mt-10 transform transition-transform duration-100 ease-in-out hover:scale-105 active:scale-95">
+                        <a href="https://mcabee.in/" target="_blank" rel="noopener noreferrer" className="flex-auto" >
+                            <motion.div
+                                initial={{ y: "10vw", opacity: 0 }}
+                                whileInView={{
+                                    y: 1,
+                                    opacity: 1,
+                                    transition: { type: "spring", stiffness: 50, delay: 0.5 },
+                                }}
+                                viewport={{ once: true, amount: 0.2 }}
+                            >
+                                <button className="px-16 py-4 mt-11 max-w-full font-regular text-white text-xl text-center whitespace-nowrap bg-[#FE1940] rounded-[40px] w-[200px] max-md:px-5 max-md:mt-10 transform transition-transform duration-100 ease-in-out hover:scale-105 active:scale-95">
                                     Explore
                                 </button>
-                            </motion.a>
-                        </Link>
+                            </motion.div>
+                        </a>
+
                     </motion.div>
                     <motion.div initial={{ y: "10vw", opacity: 0 }}
                         whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.3 } }}

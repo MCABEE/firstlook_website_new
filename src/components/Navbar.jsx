@@ -52,7 +52,10 @@ const Navbar = ({ fontcolor, percent }) => {
 
     return (
         <nav
-            className={`fixed top-0 w-full z-10 transform transition-transform duration-500 ease-in-out ${scrollDirection === 'down' ? '-translate-y-full bg-transparent' : `translate-y-0 transition-colors delay-100 bg-${bgColor}`}`}
+            className={`fixed top-0 w-full z-10 transform transition-transform duration-500 ease-in-out ${scrollDirection === 'down' ? '-translate-y-full bg-transparent' : `translate-y-0 bg-${bgColor}`}`}
+            style={{
+                transition: 'background-color 0.5s ease-in-out'
+            }}
         >
             <div className='lg:block hidden m-8 mx-20'>
                 <div className='px-14 flex justify-between items-center'>

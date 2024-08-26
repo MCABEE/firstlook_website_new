@@ -25,7 +25,7 @@ const Contact = () => {
                             </p>
                         </Link>
                         <p className='font-semibold text-[28px] sm:text-5xl mt-6 sm:mt-14 mb-2 sm:mb-5'>
-                           Business Contact
+                            Business Contact
                         </p>
                         <p className='font-light w-3/4 text-[12px] sm:text-[21px]'>
                             715A, Spencer Plaza, Mount Road
@@ -46,7 +46,12 @@ const Contact = () => {
                             About
                         </p>
                         <p className='font-light w-3/4 text-[12px] sm:text-[21px]'>
-                            Connecting singles worldwide, effortlessly. For a comprehensive overview of <br/> our company and its mission, we invite you to explore our dedicated<br/> <span className='text-[#FC3657] cursor-pointer font-medium transform transition-transform duration-100 ease-in-out hover:text-[#d66477] active:scale-95'>company page.</span>
+                            Connecting singles worldwide, effortlessly. For a comprehensive overview of <br /> our company and its mission, we invite you to explore our dedicated<br />
+                            <Link href="/about">
+                                <span className='text-[#FC3657] cursor-pointer font-medium transform transition-transform duration-100 ease-in-out hover:text-[#d66477] active:scale-95'>
+                                    company page.
+                                </span>
+                            </Link>
                         </p>
                         {/* <div className='mt-9 sm:block hidden'>
                             <svg width="105" height="19" viewBox="0 0 105 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -113,7 +118,7 @@ const Contact = () => {
 
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </>
     )
 }

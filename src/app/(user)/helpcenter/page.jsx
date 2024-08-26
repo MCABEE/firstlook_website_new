@@ -42,8 +42,8 @@ const HelpCenter = () => {
                         <p className='font-semibold text-[24px] sm:text-[54px] mb-2 sm:mb-5'>
                             Support Center
                         </p>
-                        <p className='font-light sm:w-3/4 text-[12px] sm:text-[21px] text-justify'>
-                            Welcome to the Firstlook Support Page. Here, you will find answers to frequently asked questions. If your query isn’t addressed here, please feel free to contact us directly for further assistance.
+                        <p className='font-light text-[12px] sm:text-2xl text-justify'>
+                            Welcome to the Firstlook Support Page. Here, you will find answers to frequently <br />asked questions. If your query isn’t addressed here, please feel free to contact us <br /> directly for further assistance.
                         </p>
                         <Link href='/feedback'>
                             <p className='w-3/4 text-[#FC3657] text-[12px] sm:text-[21px] font-bold transform transition-transform duration-100 ease-in-out hover:text-[#d66477] active:scale-95'>
