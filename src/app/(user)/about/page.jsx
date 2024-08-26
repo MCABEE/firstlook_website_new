@@ -175,7 +175,7 @@ const About = () => {
                             <motion.a initial={{ y: "10vw", opacity: 0 }}
                                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.5 } }}
                                 viewport={{ once: true, amount: 0.2 }} target="_blank" rel="noopener noreferrer">
-                                <button className="px-16 py-4 mt-11 max-w-full text-xl font-semibold text-center text-white whitespace-nowrap bg-rose-600 rounded-[40px] w-[200px] max-md:px-5 max-md:mt-10 transform transition-transform duration-100 ease-in-out hover:scale-105 active:scale-95">
+                                <button className="px-16 py-4 mt-11 max-w-full text-xl font-semibold text-center text-white whitespace-nowrap bg-[#FE1940] rounded-[40px] w-[200px] max-md:px-5 max-md:mt-10 transform transition-transform duration-100 ease-in-out hover:scale-105 active:scale-95">
                                     Explore
                                 </button>
                             </motion.a>

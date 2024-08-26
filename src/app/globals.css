@@ -89,3 +89,18 @@ html {
 input:focus {
   outline: none; 
 }
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-enter {
+  animation: slideIn 1s ease-out forwards;
+}
