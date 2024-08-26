@@ -21,7 +21,7 @@ const PageUnderConstruction = () => {
                             <h1 className="text-6xl font-semibold leading-[65px] max-md:text-4xl max-md:leading-[53px]">
                                 We&apos;re enhancing <br /> this page
                             </h1>
-                            <p className="mt-3 sm:mt-6 sm:text-2xl max-w-xs sm:max-w-2xl">
+                            <p className="mt-3 sm:mt-6 md:leading-snug font-light text-sm md:text-3xl max-w-xs sm:max-w-3xl">
                                 to bring you an even better experience. It&apos;ll be ready soon! <br /> In the meantime, stay connected with us on{" "}
                                 <span className="font-bold">our social handles</span> <br />for the latest updates
                             </p>
@@ -38,7 +38,14 @@ const PageUnderConstruction = () => {
                                         alt="Facebook Icon"
                                         className="object-contain shrink-0 my-auto w-9 aspect-square"
                                     />
-                                    <div className="flex-auto">/firstlookappofficial</div>
+                                    <a
+                                        href="https://www.facebook.com/firstlookappofficial?mibextid=ZbWKwL"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex-auto"
+                                    >
+                                        /firstlookappofficial
+                                    </a>
                                 </a>
 
                                 <a
@@ -53,7 +60,14 @@ const PageUnderConstruction = () => {
                                         alt="Instagram Icon"
                                         className="object-contain shrink-0 my-auto w-9 aspect-square"
                                     />
-                                    <div className="flex-auto">/firstlook_app</div>
+                                    <a
+                                        href="https://youtube.com/@firstlook_app?si=pbbla-7I67I0b1eA"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex-auto"
+                                    >
+                                        /firstlook_app
+                                    </a>
                                 </a>
                             </div>
 
@@ -61,7 +75,7 @@ const PageUnderConstruction = () => {
                     </section>
                 </section>
             </motion.div>
-            <Footer/>
+            <Footer />
         </>
     )
 }
