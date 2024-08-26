@@ -77,7 +77,7 @@ export default function Home() {
                 initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.3 } }}
                 viewport={{ once: true, amount: 0.3 }}
-                className="text-xl text-white font-semibold md:text-6xl mt-28"
+                className="text-xl text-white font-regular md:text-7xl mt-28"
               >
                 Making Connections
               </motion.h1>
@@ -85,7 +85,7 @@ export default function Home() {
                 initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.3 } }}
                 viewport={{ once: true, amount: 0.3 }}
-                className="text-xl text-white font-bold md:text-6xl mt-3"
+                className="text-xl text-white font-regular md:text-7xl mt-3"
               >
                 Effortless
               </motion.h1>
@@ -94,10 +94,9 @@ export default function Home() {
                 initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.3 } }}
                 viewport={{ once: true, amount: 0.3 }}
-                className="mt-12 max-w-4xl text-sm md:text-3xl font-regular text-white"
+                className="mt-12 max-w-4xl text-sm md:text-3xl font-thin text-white"
               >
-                Connecting singles worldwide, effortlessly. <br />
-                your reliable platform for matchmaking!
+                Connecting singles worldwide, effortlessly.
               </motion.p>
 
               <motion.div
@@ -130,7 +129,7 @@ export default function Home() {
       <div className="flex justify-center flex-col items-center mt-28 mb-28">
         <motion.h2 initial={{ y: "10vw", opacity: 0 }}
           whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-          viewport={{ once: true, amount: 0.3 }} className="text-2xl md:leading-snug font-bold sm:text-6xl max-w-lg md:max-w-6xl text-center px-10">
+          viewport={{ once: true, amount: 0.3 }} className="text-2xl md:leading-snug sm:text-6xl max-w-lg md:max-w-6xl text-center px-10">
           Firstlook: Where connections thrive and loneliness fades.
         </motion.h2>
         <motion.p initial={{ y: "10vw", opacity: 0 }}
@@ -154,7 +153,7 @@ export default function Home() {
             <div className="flex flex-col justify-center md:py-12 rounded-sm md:max-w-2xl text-left">
               <motion.h1 initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-                viewport={{ once: true, amount: 0.3 }} className="text-2xl font-semibold md:leading-snug md:text-6xl">Verified profiles, genuine connections !
+                viewport={{ once: true, amount: 0.3 }} className="text-2xl md:leading-snug md:text-6xl">Verified profiles, genuine connections !
               </motion.h1>
               <motion.p initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
@@ -217,7 +216,7 @@ export default function Home() {
               </div>
               <motion.h1 initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-                viewport={{ once: true, amount: 0.3 }} className="text-2xl font-semibold md:leading-snug md:text-6xl mt-12">Video Reels <br />
+                viewport={{ once: true, amount: 0.3 }} className="text-2xl md:leading-snug md:text-6xl mt-12">Video Reels <br />
                 bring your profile to life !
               </motion.h1>
               <motion.p initial={{ y: "10vw", opacity: 0 }}
@@ -286,7 +285,7 @@ export default function Home() {
               </div>
               <motion.h1 initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-                viewport={{ once: true, amount: 0.3 }} className="text-2xl font-semibold md:leading-snug md:text-6xl">Elevate your connections with circle&apos;s and proposals!</motion.h1>
+                viewport={{ once: true, amount: 0.3 }} className="text-2xl md:leading-snug md:text-6xl">Elevate your connections with circle&apos;s and proposals!</motion.h1>
               <motion.p initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
                 viewport={{ once: true, amount: 0.3 }} className="mt-12 mb-6 md:max-w-2xl md:leading-snug font-light text-sm md:text-3xl">Forge meaningful connections effortlessly. Save<br /> your favorites, unlock mutual interest, and take the<br /> next step with direct proposals.</motion.p>
@@ -342,7 +341,7 @@ export default function Home() {
               </div>
               <motion.h1 initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-                viewport={{ once: true, amount: 0.3 }} className="text-2xl font-semibold md:leading-snug md:text-6xl">Chat beyond<br /> words !
+                viewport={{ once: true, amount: 0.3 }} className="text-2xl md:leading-snug md:text-6xl">Chat beyond<br /> words !
               </motion.h1>
               <motion.p initial={{ y: "10vw", opacity: 0 }}
                 whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
@@ -366,18 +365,18 @@ export default function Home() {
       <div className="mt-24">
         <motion.p initial={{ y: "10vw", opacity: 0 }}
           whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-          viewport={{ once: true, amount: 0.3 }} className="mx-auto text-center font-semibold w-72 sm:w-[500px]  md:w-[600px] lg:w-[1050px] text-[18px] sm:text-2xl md:text-3xl lg:text-4xl">
+          viewport={{ once: true, amount: 0.3 }} className="mx-auto text-center w-72 sm:w-[500px]  md:w-[600px] lg:w-[1050px] text-[18px] sm:text-2xl md:text-3xl lg:text-4xl">
           Ready to rewrite your love story?
         </motion.p>
         <div className="sm:block hidden">
           <motion.p initial={{ y: "10vw", opacity: 0 }}
             whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-            viewport={{ once: true, amount: 0.3 }} className="mx-auto text-center font-semibold sm:w-[500px] md:w-[600px]  lg:w-[700px] text-[18px] sm:text-2xl md:text-3xl lg:text-4xl mt-2">
+            viewport={{ once: true, amount: 0.3 }} className="mx-auto text-center sm:w-[500px] md:w-[600px]  lg:w-[700px] text-[18px] sm:text-2xl md:text-3xl lg:text-4xl mt-2">
             Download now and start building your path
           </motion.p>
           <motion.p initial={{ y: "10vw", opacity: 0 }}
             whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-            viewport={{ once: true, amount: 0.3 }} className="mx-auto text-center font-semibold sm:w-[500px] md:w-[600px]  lg:w-[700px] text-[18px] sm:text-2xl md:text-3xl lg:text-4xl mt-2">
+            viewport={{ once: true, amount: 0.3 }} className="mx-auto text-center sm:w-[500px] md:w-[600px]  lg:w-[700px] text-[18px] sm:text-2xl md:text-3xl lg:text-4xl mt-2">
             to happily ever after!
           </motion.p>
         </div>
