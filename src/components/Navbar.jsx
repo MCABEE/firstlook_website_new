@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from "framer-motion"
-import logo from '../../public/asset/logo_1.png';
+import logo from '../../public/asset/FIRSTLOOKnewlogo.png';
 
 
 const Navbar = ({ fontcolor, percent }) => {
