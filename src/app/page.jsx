@@ -49,7 +49,7 @@ export default function Home() {
     <div className=''>
       <Navbar fontcolor='white' />
 
-      <div className="flex justify-center mt-0 bg-black">
+      <div className="flex justify-center mt-0 bg-[#161616]">
         <motion.section
           className="w-[100%] h-screen relative bg-[url('../../public/asset/hero_bg_new.png')] bg-cover bg-center bg-no-repeat"
           initial={{ y: "1vw", opacity: 0 }}
