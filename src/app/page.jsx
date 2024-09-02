@@ -61,7 +61,7 @@ export default function Home() {
       </div>
       <div className="flex justify-center mt-0 bg-[#161616]">
         <motion.section
-          className="w-[100%] h-screen relative bg-[url('../../public/asset/hero_bg_new.png')] bg-cover bg-center bg-no-repeat"
+          className="w-[100%] h-screen relative"
           initial={{ y: "20vw", opacity: 0, backgroundPosition: "50% 100%" }}
           whileInView={{
             y: 0,
@@ -71,6 +71,13 @@ export default function Home() {
           }}
           viewport={{ once: true, amount: 0.1 }}
         >
+          <video
+            className="absolute top-0 left-0 w-full h-full object-cover"
+            src="https://customer-szhp4q62skv7ggqy.cloudflarestream.com/b4c854847e789b7d1d0abf101ddb1048/downloads/default.mp4"
+            autoPlay
+            loop
+            muted
+          />
           <div className="absolute inset-0 mx-auto max-w-screen-xl px-6 md:px-20 py-28 lg:py-36 lg:flex lg:items-center lg:px-6">
             <div className="max-w-4xl text-left mt-24">
               <motion.h1
