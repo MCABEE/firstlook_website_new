@@ -19,10 +19,14 @@ export default function verified() {
         </div>
         <div className="flex flex-col justify-center p-10 sm:py-12 lg:flex-row lg:justify-between">
           <div className="flex flex-col justify-center px-12 md:py-12 rounded-sm md:max-w-6xl text-left">
-            <Image src={verified1} alt="verified-profile" className="my-10" />
+            <motion.div initial={{ y: "10vw", opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.2 } }}
+              viewport={{ once: true, amount: 0.3 }} >
+              <Image src={verified1} alt="verified-profile" className="my-10" />
+            </motion.div>
             <motion.h1 initial={{ y: "10vw", opacity: 0 }}
               whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
-              viewport={{ once: true, amount: 0.3 }} className="text-2xl md:leading-snug md:text-6xl">Verified profiles, genuine <br/>connections !
+              viewport={{ once: true, amount: 0.3 }} className="text-2xl md:leading-snug md:text-6xl">Verified profiles, genuine <br />connections !
             </motion.h1>
             <motion.p initial={{ y: "10vw", opacity: 0 }}
               whileInView={{ y: 1, opacity: 1, transition: { type: "spring", stiffness: 50, delay: 0.4 } }}
