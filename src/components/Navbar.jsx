@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from "framer-motion"
-import logo from '../../public/asset/FIRSTLOOKnewlogo.png';
-
+import logoWhite from '../../public/asset/FIRSTLOOKnewlogo.png';
+import logoBlack from '../../public/asset/FIRSTLOOKnewlogoblack.png';
 
 const Navbar = ({ fontcolor, percent }) => {
 
@@ -13,7 +13,7 @@ const Navbar = ({ fontcolor, percent }) => {
     const [lastScrollTop, setLastScrollTop] = useState(0);
     const [bgColor, setBgColor] = useState('transparent');
     const [fColor, setFColor] = useState(fontcolor);
-
+    const logo = fColor === 'black' ? logoBlack : logoWhite;
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
@@ -48,75 +48,65 @@ const Navbar = ({ fontcolor, percent }) => {
         { href: '/about', label: 'About' },
         { href: '/contact', label: 'Contact' },
     ];
-    const filteredLinks = links.slice(1);
 
     return (
         <nav
-            className={`fixed top-0 w-full z-10 transform transition-transform duration-500 ease-in-out ${scrollDirection === 'down' ? '-translate-y-full bg-transparent' : `translate-y-0 bg-${bgColor}`}`}
+            className={`fixed top-0 w-full z-10 transform transition-transform duration-500 ease-in-out ${scrollDirection === 'down' && !isOpen ? '-translate-y-full bg-transparent' : `translate-y-0 bg-${bgColor}`}`}
             style={{
                 transition: 'background-color 0.5s ease-in-out'
             }}
         >
-            <div className='lg:block hidden m-8 mx-20'>
-                <div className='px-14 flex justify-between items-center'>
-                    <Link href='/'>
+            <div className='xl:block hidden m-8 mx-20'>
+                <div className='relative px-14 flex justify-between items-center'>
+                    {/* Side links container */}
+                    <div className={`flex text-xl text-${fColor} items-center gap-10 mx-10`}>
+                        <Link href='/pageunderconstruction' className='cursor-pointer font-regular'>
+                            <p className="inline-block relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full">
+                                How it works
+                            </p>
+                        </Link>
+                        <Link href='/membershippolicy' className='cursor-pointer font-regular'>
+                            <p className="inline-block relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full">
+                                Policy
+                            </p>
+                        </Link>
+                        <Link href='/helpcenter' className='cursor-pointer font-regular'>
+                            <p className="inline-block relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full">
+                                Support
+                            </p>
+                        </Link>
+                    </div>
+
+                    {/* Centered logo */}
+                    <Link href='/' className='absolute left-1/2 transform -translate-x-1/2'>
                         <Image className='cursor-pointer transform transition-transform duration-100 ease-in-out hover:scale-110' src={logo} alt="logo" />
                     </Link>
-                    <div className='flex items-center'>
-                        <div className={`flex text-xl text-${fColor} items-center gap-10 mx-10`}>
-                            {filteredLinks.map((link, index) => (
-                                <Link
-                                    key={link.href}
-                                    href={link.href}
-                                    className='cursor-pointer font-regular'
-                                >
-                                    <p className="inline-block relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full">
-                                        {link.label}
-                                    </p>
-                                </Link>
-                            ))}
-                        </div>
-                        <Link href='/download'>
-                            <button className={`flex items-center font-regular text-white text-xl md:px-12 md:py-3 px-6 py-2 bg-[#FE1940] rounded-3xl gap-4 cursor-pointer transform transition-transform duration-100 ease-in-out hover:scale-105`}>
-                                Download
-                                <div className="sm:hidden block">
-                                    <svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0.777778 12.4444H10.1111C10.5407 12.4444 10.8889 12.7927 10.8889 13.2222C10.8889 13.616 10.5963 13.9414 10.2167 13.9929L10.1111 14H0.777778C0.348223 14 0 13.6518 0 13.2222C0 12.8285 0.292604 12.503 0.672238 12.4515L0.777778 12.4444ZM5.33891 0.00710025L5.44445 0C5.8382 0 6.16362 0.292604 6.21512 0.672238L6.22222 0.777778V8.75052L8.56095 6.41318C8.83708 6.13705 9.26918 6.11195 9.57366 6.33787L9.6609 6.41318C9.93703 6.68931 9.96213 7.1214 9.7362 7.42589L9.6609 7.51312L5.99442 11.1796C5.71829 11.4557 5.28619 11.4808 4.98171 11.2549L4.89447 11.1796L1.22799 7.51312C0.924252 7.20938 0.924252 6.71692 1.22799 6.41318C1.50412 6.13705 1.93622 6.11195 2.2407 6.33787L2.32794 6.41318L4.66667 8.75259V0.777778C4.66667 0.384019 4.95927 0.058602 5.33891 0.00710025Z" fill="white" />
-                                    </svg>
-                                </div>
-                                <div className="sm:block hidden">
-                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 16H13C13.5523 16 14 16.4477 14 17C14 17.5063 13.6238 17.9247 13.1357 17.9909L13 18H1C0.447715 18 0 17.5523 0 17C0 16.4937 0.376205 16.0753 0.864306 16.0091L1 16ZM6.86431 0.00912889L7 0C7.50626 0 7.92465 0.376205 7.99087 0.864306L8 1V11.2507L11.0069 8.24551C11.362 7.89049 11.9175 7.85822 12.309 8.14869L12.4212 8.24551C12.7762 8.60054 12.8084 9.15609 12.518 9.54757L12.4212 9.65973L7.70711 14.3738C7.35208 14.7288 6.79653 14.7611 6.40505 14.4706L6.29289 14.3738L1.57885 9.65973C1.18832 9.2692 1.18832 8.63604 1.57885 8.24551C1.93387 7.89049 2.48942 7.85822 2.8809 8.14869L2.99306 8.24551L6 11.2533V1C6 0.493739 6.37621 0.0753454 6.86431 0.00912889Z" fill="white" />
-                                    </svg>
-                                </div>
-                            </button>
+
+                    {/* Right links container */}
+                    <div className={`flex text-xl text-${fColor} items-center gap-10 mx-10`}>
+                        <Link href='/about' className='cursor-pointer font-regular'>
+                            <p className="inline-block relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full">
+                                About
+                            </p>
+                        </Link>
+                        <Link href='/contact' className='cursor-pointer font-regular'>
+                            <p className="inline-block relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full">
+                                Contact
+                            </p>
                         </Link>
                     </div>
                 </div>
+
             </div>
 
 
             {isOpen ?
-                <div className='lg:hidden block bg-white'>
+                <div className='xl:hidden block bg-white'>
                     <div className={`h-screen transition-all duration-500 ease-out ${isOpen ? "right-0" : "-right-[120vw]"}`}>
                         <div className='flex w-screen justify-between items-end p-4'>
                             <div className='flex justify-center '>
                                 <Link onClick={() => { setIsOpen(false) }} href='/'>
-                                    <div className='cursor-pointer transform transition-transform duration-100 ease-in-out hover:scale-110'>
-                                        <svg width="174" height="32" viewBox="0 0 174 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M15.5227 10.3016V15.5816H14.1727C13.7927 14.1216 13.2927 13.1216 12.6727 12.5816C12.0727 12.0416 11.1927 11.7716 10.0327 11.7716H6.10266V20.1116H9.40266C10.2027 20.1116 10.8027 19.9416 11.2027 19.6016C11.6027 19.2416 11.9527 18.5616 12.2527 17.5616H13.4227V24.8516H12.2527C11.9527 23.5516 11.5927 22.6916 11.1727 22.2716C10.7527 21.8516 10.0927 21.6416 9.19266 21.6416H6.10266V28.2116C6.10266 28.6916 6.19266 29.0316 6.37266 29.2316C6.55266 29.4116 6.91266 29.5416 7.45266 29.6216L8.50266 29.7416V31.0016H0.222656V29.7416L1.09266 29.6216C1.57266 29.5416 1.88266 29.4116 2.02266 29.2316C2.16266 29.0516 2.23266 28.7116 2.23266 28.2116V13.0916C2.23266 12.5916 2.16266 12.2516 2.02266 12.0716C1.88266 11.8916 1.57266 11.7616 1.09266 11.6816L0.222656 11.5616V10.3016H15.5227Z" fill="#FE1940" />
-                                            <path d="M16.9512 31.0016V29.7416L17.8212 29.6216C18.3012 29.5416 18.6112 29.4116 18.7512 29.2316C18.8912 29.0516 18.9612 28.7116 18.9612 28.2116V13.0916C18.9612 12.5916 18.8912 12.2516 18.7512 12.0716C18.6112 11.8916 18.3012 11.7616 17.8212 11.6816L16.9512 11.5616V10.3016H24.8412V11.5616L23.9712 11.6816C23.5112 11.7616 23.2012 11.9016 23.0412 12.1016C22.9012 12.2816 22.8312 12.6116 22.8312 13.0916V28.2116C22.8312 28.6916 22.9012 29.0316 23.0412 29.2316C23.2012 29.4116 23.5112 29.5416 23.9712 29.6216L24.8412 29.7416V31.0016H16.9512Z" fill="#FE1940" />
-                                            <path d="M38.4455 21.2816L44.3255 30.4016C43.5255 31.0216 42.5855 31.3316 41.5055 31.3316C40.8655 31.3316 40.3555 31.1716 39.9755 30.8516C39.5955 30.5316 39.1955 29.9516 38.7755 29.1116C38.5555 28.6916 37.2755 26.2516 34.9355 21.7916H32.2355V28.2116C32.2355 28.6916 32.3055 29.0316 32.4455 29.2316C32.6055 29.4116 32.9155 29.5416 33.3755 29.6216L34.2755 29.7416V31.0016H26.3555V29.7416L27.2255 29.6216C27.7055 29.5416 28.0155 29.4116 28.1555 29.2316C28.2955 29.0516 28.3655 28.7116 28.3655 28.2116V13.0916C28.3655 12.5916 28.2955 12.2516 28.1555 12.0716C28.0155 11.8916 27.7055 11.7616 27.2255 11.6816L26.3555 11.5616V10.3016H36.4955C40.9555 10.3016 43.1855 12.0116 43.1855 15.4316C43.1855 16.8316 42.7655 18.0416 41.9255 19.0616C41.0855 20.0616 39.9255 20.8016 38.4455 21.2816ZM32.2355 11.7716V20.3516H34.8455C36.3255 20.3516 37.4155 20.0216 38.1155 19.3616C38.8155 18.6816 39.1655 17.5816 39.1655 16.0616C39.1655 14.5616 38.8555 13.4716 38.2355 12.7916C37.6155 12.1116 36.6155 11.7716 35.2355 11.7716H32.2355Z" fill="#FE1940" />
-                                            <path d="M46.1241 30.1616V24.7316H47.3241L47.6241 25.7516C48.0241 27.0916 48.7341 28.1416 49.7541 28.9016C50.7941 29.6416 51.9541 30.0116 53.2341 30.0116C55.5541 30.0116 56.7141 28.9916 56.7141 26.9516C56.7141 26.1516 56.4941 25.4716 56.0541 24.9116C55.6541 24.3716 55.1641 23.9216 54.5841 23.5616C54.0241 23.2016 53.1241 22.7416 51.8841 22.1816C50.7241 21.6616 49.7341 21.1616 48.9141 20.6816C47.1141 19.5816 46.2141 18.0316 46.2141 16.0316C46.2141 14.0116 46.9041 12.4716 48.2841 11.4116C49.6841 10.3316 51.3641 9.79156 53.3241 9.79156C55.4041 9.79156 57.2241 10.1016 58.7841 10.7216V15.6116H57.5841C56.9041 12.6516 55.2741 11.1716 52.6941 11.1716C51.7341 11.1716 50.9441 11.4316 50.3241 11.9516C49.7041 12.4716 49.3941 13.1516 49.3941 13.9916C49.3941 14.6516 49.5941 15.2416 49.9941 15.7616C50.3741 16.2216 50.8341 16.6116 51.3741 16.9316C51.9141 17.2516 52.7541 17.6716 53.8941 18.1916C55.2341 18.7916 56.3041 19.3416 57.1041 19.8416C59.0841 21.0216 60.0741 22.7416 60.0741 25.0016C60.0741 27.0216 59.4241 28.6116 58.1241 29.7716C56.8241 30.9116 55.0741 31.4816 52.8741 31.4816C50.2941 31.4816 48.0441 31.0416 46.1241 30.1616Z" fill="#FE1940" />
-                                            <path d="M77.5793 15.9716H76.3793L76.1693 15.0116C75.8693 13.6716 75.5693 12.8416 75.2693 12.5216C74.9893 12.1816 74.3993 12.0116 73.4993 12.0116H71.0993V28.2116C71.0993 28.6916 71.1893 29.0316 71.3693 29.2316C71.5493 29.4116 71.9093 29.5416 72.4493 29.6216L73.4993 29.7416V31.0016H64.8293V29.7416L65.8793 29.6216C66.4193 29.5416 66.7793 29.4116 66.9593 29.2316C67.1393 29.0316 67.2293 28.6916 67.2293 28.2116V12.0116H64.8593C63.9393 12.0516 63.3493 12.2116 63.0893 12.4916C62.8493 12.7516 62.5493 13.5916 62.1893 15.0116L61.9793 15.9716H60.7493V10.3016H77.5793V15.9716Z" fill="#FE1940" />
-                                            <path d="M92.1705 25.1216H92.9505V31.0016H79.1205V30.2516L80.3205 30.1016C80.8605 30.0216 81.2206 29.9116 81.4006 29.7716C81.5806 29.6316 81.6705 29.3916 81.6705 29.0516V12.2516C81.6705 11.9116 81.5806 11.6716 81.4006 11.5316C81.2406 11.3716 80.8805 11.2616 80.3205 11.2016L79.1205 11.0516V10.3016H85.9905V11.0516L84.7906 11.2016C84.2506 11.2816 83.8905 11.3916 83.7105 11.5316C83.5305 11.6716 83.4405 11.9116 83.4405 12.2516V30.1616H87.9405C89.3005 30.1616 90.2805 29.8416 90.8805 29.2016C91.4805 28.5416 91.9105 27.1816 92.1705 25.1216Z" fill="black" />
-                                            <path d="M94.8363 21.2216C94.7963 17.7816 95.7863 15.0016 97.8063 12.8816C99.8463 10.7616 102.376 9.72156 105.396 9.76156C108.376 9.76156 110.756 10.7216 112.536 12.6416C114.336 14.5416 115.236 17.0216 115.236 20.0816C115.276 23.4816 114.276 26.2416 112.236 28.3616C110.196 30.4816 107.676 31.5216 104.676 31.4816C101.696 31.4816 99.3063 30.5316 97.5063 28.6316C95.7263 26.7316 94.8363 24.2616 94.8363 21.2216ZM113.316 20.9816C113.316 17.6616 112.566 15.1216 111.066 13.3616C109.566 11.5816 107.506 10.6916 104.886 10.6916C102.366 10.6916 100.386 11.5616 98.9463 13.3016C97.5063 15.0216 96.7863 17.3216 96.7863 20.2016C96.7863 23.5416 97.5263 26.0916 99.0063 27.8516C100.506 29.6116 102.576 30.4916 105.216 30.4916C107.736 30.4916 109.716 29.6416 111.156 27.9416C112.596 26.2416 113.316 23.9216 113.316 20.9816Z" fill="black" />
-                                            <path d="M118.01 21.2216C117.97 17.7816 118.96 15.0016 120.98 12.8816C123.02 10.7616 125.55 9.72156 128.57 9.76156C131.55 9.76156 133.93 10.7216 135.71 12.6416C137.51 14.5416 138.41 17.0216 138.41 20.0816C138.45 23.4816 137.45 26.2416 135.41 28.3616C133.37 30.4816 130.85 31.5216 127.85 31.4816C124.87 31.4816 122.48 30.5316 120.68 28.6316C118.9 26.7316 118.01 24.2616 118.01 21.2216ZM136.49 20.9816C136.49 17.6616 135.74 15.1216 134.24 13.3616C132.74 11.5816 130.68 10.6916 128.06 10.6916C125.54 10.6916 123.56 11.5616 122.12 13.3016C120.68 15.0216 119.96 17.3216 119.96 20.2016C119.96 23.5416 120.7 26.0916 122.18 27.8516C123.68 29.6116 125.75 30.4916 128.39 30.4916C130.91 30.4916 132.89 29.6416 134.33 27.9416C135.77 26.2416 136.49 23.9216 136.49 20.9816Z" fill="black" />
-                                            <path d="M153.667 14.1116L149.677 18.9416L157.687 30.8216C157.327 31.1216 156.947 31.2716 156.547 31.2716C156.207 31.2716 155.917 31.1716 155.677 30.9716C155.437 30.7716 155.147 30.4216 154.807 29.9216L148.537 20.3216L144.847 24.7916V29.0516C144.847 29.3916 144.937 29.6416 145.117 29.8016C145.297 29.9416 145.677 30.0416 146.257 30.1016L147.547 30.2516V31.0016H140.527V30.2516L141.727 30.1016C142.267 30.0216 142.627 29.9116 142.807 29.7716C142.987 29.6316 143.077 29.3916 143.077 29.0516V12.2516C143.077 11.9116 142.987 11.6716 142.807 11.5316C142.647 11.3716 142.287 11.2616 141.727 11.2016L140.527 11.0516V10.3016H147.397V11.0516L146.197 11.2016C145.657 11.2816 145.297 11.3916 145.117 11.5316C144.937 11.6716 144.847 11.9116 144.847 12.2516V23.4716L152.497 14.1116L153.187 13.2716C153.867 12.4916 154.207 11.9616 154.207 11.6816C154.207 11.4216 153.907 11.2616 153.307 11.2016L151.717 11.0516V10.3016H158.227V11.0516L157.267 11.2016C156.767 11.2816 156.247 11.5416 155.707 11.9816C155.167 12.4016 154.487 13.1116 153.667 14.1116Z" fill="black" />
-                                            <path d="M165.412 1.82156H165.082L165.032 1.54156C164.945 1.08156 164.862 0.804896 164.782 0.711563C164.709 0.61823 164.489 0.55823 164.122 0.531563H163.162V6.21156C163.162 6.35156 163.192 6.44823 163.252 6.50156C163.319 6.5549 163.455 6.5949 163.662 6.62156L164.082 6.67156V7.00156H161.322V6.67156L161.742 6.62156C161.942 6.5949 162.072 6.5549 162.132 6.50156C162.199 6.44823 162.232 6.35156 162.232 6.21156V0.531563H161.272C161.119 0.53823 161.022 0.541563 160.982 0.541563C160.942 0.541563 160.879 0.554896 160.792 0.581563C160.705 0.60823 160.655 0.634896 160.642 0.661563C160.629 0.688229 160.599 0.748229 160.552 0.841563C160.505 0.928229 160.472 1.01823 160.452 1.11156C160.432 1.2049 160.402 1.34823 160.362 1.54156L160.312 1.82156H159.992V0.101562H165.412V1.82156Z" fill="black" />
-                                            <path d="M173.458 6.62156L173.808 6.67156V7.00156H171.298V6.67156L171.688 6.62156C171.848 6.60823 171.958 6.58156 172.018 6.54156C172.078 6.4949 172.108 6.42156 172.108 6.32156L172.098 6.22156L171.538 0.771563L169.538 7.01156H169.318L167.358 0.801563L166.848 5.16156C166.801 5.54156 166.778 5.82156 166.778 6.00156C166.778 6.20156 166.805 6.34823 166.858 6.44156C166.918 6.52823 167.025 6.5849 167.178 6.61156L167.558 6.67156V7.00156H165.448V6.67156L165.788 6.62156C165.995 6.58156 166.131 6.47823 166.198 6.31156C166.271 6.13823 166.348 5.7549 166.428 5.16156L166.828 1.94156C166.881 1.52823 166.908 1.23156 166.908 1.05156C166.908 0.871563 166.881 0.738229 166.828 0.651563C166.781 0.564896 166.695 0.50823 166.568 0.481563L166.228 0.431563V0.101562H168.108L169.678 5.23156L171.368 0.101562H173.178V0.431563L172.828 0.481563C172.688 0.501563 172.591 0.534896 172.538 0.581563C172.485 0.621563 172.458 0.688229 172.458 0.781563L172.998 6.22156C173.011 6.3549 173.048 6.44823 173.108 6.50156C173.168 6.5549 173.285 6.5949 173.458 6.62156Z" fill="black" />
-                                        </svg>
-                                    </div>
+                                    <Image className='cursor-pointer transform transition-transform duration-100 ease-in-out hover:scale-110' src={logoBlack} alt="logo" />
                                 </Link>
                             </div>
 
@@ -150,10 +140,10 @@ const Navbar = ({ fontcolor, percent }) => {
                     </div>
                 </div>
                 :
-                <div className='lg:hidden block mt-0'>
+                <div className='xl:hidden block mt-0'>
                     <div className='w-screen p-5 flex'>
                         <Link href={"/"}>
-                            <Image className='h-[30px] w-[24px] cursor-pointer transform transition-transform duration-100 ease-in-out hover:scale-110' width={100} src={logo} alt="logo" />
+                            <Image className='cursor-pointer transform transition-transform duration-100 ease-in-out hover:scale-110' src={logo} alt="logo" />
                         </Link>
 
                         <div onClick={() => setIsOpen(true)} className='flex justify-end w-screen items-center cursor-pointer'>
